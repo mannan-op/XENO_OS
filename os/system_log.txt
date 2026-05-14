@@ -11792,3 +11792,10 @@ Time quantum set to 1
 CPU core budget set to 10
 Memory manager attached
 Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Process Manager shutting down

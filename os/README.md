@@ -8,9 +8,9 @@
 
 ## Architecture Diagrams
 
-|                    Layer Diagram                    |                Process State Machine                 |               Booking Data Flow                |
-| :-------------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------: |
-| ![Layer Diagram](os/docs/xeno_os_layer_diagram.png) | ![State Machine](os/docs/xeno_os_process_states.png) | ![Data Flow](os/docs/xeno_os_booking_flow.png) |
+|                  Layer Diagram                   |               Process State Machine               |              Booking Data Flow              |
+| :----------------------------------------------: | :-----------------------------------------------: | :-----------------------------------------: |
+| ![Layer Diagram](docs/xeno_os_layer_diagram.png) | ![State Machine](docs/xeno_os_process_states.png) | ![Data Flow](docs/xeno_os_booking_flow.png) |
 
 > ℹ Place the three architecture PNGs in a `docs/` folder for the images to render.
 
