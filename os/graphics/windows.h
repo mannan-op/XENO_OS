@@ -1,6 +1,6 @@
 #pragma once
-
 #include "raylib.h"
+#include "../system/process.h"
 #include <string>
 
 using namespace std;
@@ -27,4 +27,5 @@ public:
     bool isFocused() const;
     void setFocused(bool val);
     bool containsPoint(Vector2 point) const;
+    virtual process_id_t getPid() const { return 0; }
 };

@@ -1,0 +1,1818 @@
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to Round Robin
+Time quantum set to 2
+02:34:02 | PID 20191 | Terminal | RUNNING | Process created
+Created process PID 20191 (Terminal)
+02:34:04 | PID 20191 | Terminal | TERMINATED | Process terminated
+Terminated process PID 20191 (Terminal)
+02:34:05 | PID 20192 | Logger | RUNNING | Process created
+Created process PID 20192 (Logger)
+02:34:09 | PID 20192 | Logger | TERMINATED | Process terminated
+Terminated process PID 20192 (Logger)
+02:34:10 | PID 20193 | Logger | RUNNING | Process created
+Created process PID 20193 (Logger)
+02:34:11 | PID 20193 | Logger | TERMINATED | Process terminated
+Terminated process PID 20193 (Logger)
+02:34:12 | PID 20194 | Scheduler | RUNNING | Process created
+Created process PID 20194 (Scheduler)
+02:34:15 | PID 20194 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 20194 (Scheduler)
+02:34:16 | PID 20195 | Terminal | RUNNING | Process created
+Created process PID 20195 (Terminal)
+02:34:22 | PID 20195 | Terminal | TERMINATED | Process terminated
+Terminated process PID 20195 (Terminal)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to Round Robin
+Time quantum set to 2
+02:38:46 | PID 22791 | Booking File | RUNNING | Process created
+Created process PID 22791 (Booking File)
+02:38:48 | PID 22791 | Booking File | TERMINATED | Process terminated
+Terminated process PID 22791 (Booking File)
+02:38:49 | PID 22792 | System Log | RUNNING | Process created
+Created process PID 22792 (System Log)
+02:38:59 | PID 22792 | System Log | TERMINATED | Process terminated
+Terminated process PID 22792 (System Log)
+02:39:00 | PID 22868 | Logger | RUNNING | Process created
+Created process PID 22868 (Logger)
+02:39:04 | PID 22868 | Logger | TERMINATED | Process terminated
+Terminated process PID 22868 (Logger)
+02:39:05 | PID 22869 | Terminal | RUNNING | Process created
+Created process PID 22869 (Terminal)
+02:39:06 | PID 22869 | Terminal | TERMINATED | Process terminated
+Terminated process PID 22869 (Terminal)
+02:39:06 | PID 22870 | Scheduler | RUNNING | Process created
+Created process PID 22870 (Scheduler)
+02:39:08 | PID 22870 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 22870 (Scheduler)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+02:45:15 | PID 27088 | Railway Reservation | RUNNING | Process created
+Created process PID 27088 (Railway Reservation)
+02:45:56 | PID 27088 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 27088 (Railway Reservation)
+02:45:57 | PID 27148 | System Log | RUNNING | Process created
+Created process PID 27148 (System Log)
+02:46:03 | PID 27148 | System Log | TERMINATED | Process terminated
+Terminated process PID 27148 (System Log)
+02:46:04 | PID 27149 | Scheduler | RUNNING | Process created
+Created process PID 27149 (Scheduler)
+02:46:07 | PID 27149 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 27149 (Scheduler)
+02:46:07 | PID 27150 | Railway Reservation | RUNNING | Process created
+Created process PID 27150 (Railway Reservation)
+02:46:10 | PID 27150 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 27150 (Railway Reservation)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+02:50:17 | PID 30725 | OS Concepts Lab | RUNNING | Process created
+Created process PID 30725 (OS Concepts Lab)
+02:50:17 | PID 30726 | Lifecycle Demo | RUNNING | Process created
+Created process PID 30726 (Lifecycle Demo)
+02:50:17 | PID 30726 | Lifecycle Demo | READY | Lifecycle demo moved to READY
+Lifecycle demo moved to READY | PID 30726 (Lifecycle Demo)
+02:50:17 | PID 30726 | Lifecycle Demo | RUNNING | Lifecycle demo moved to RUNNING
+Lifecycle demo moved to RUNNING | PID 30726 (Lifecycle Demo)
+02:50:17 | PID 30726 | Lifecycle Demo | BLOCKED | Lifecycle demo blocked on semaphore
+Lifecycle demo blocked on semaphore | PID 30726 (Lifecycle Demo)
+02:50:17 | PID 30726 | Lifecycle Demo | READY | Lifecycle demo unblocked and returned to READY
+Lifecycle demo unblocked and returned to READY | PID 30726 (Lifecycle Demo)
+02:50:17 | PID 30726 | Lifecycle Demo | TERMINATED | Process terminated
+Terminated process PID 30726 (Lifecycle Demo)
+02:50:25 | PID 30730 | Lifecycle Demo | RUNNING | Process created
+Created process PID 30730 (Lifecycle Demo)
+02:50:25 | PID 30730 | Lifecycle Demo | READY | Lifecycle demo moved to READY
+Lifecycle demo moved to READY | PID 30730 (Lifecycle Demo)
+02:50:25 | PID 30730 | Lifecycle Demo | RUNNING | Lifecycle demo moved to RUNNING
+Lifecycle demo moved to RUNNING | PID 30730 (Lifecycle Demo)
+02:50:25 | PID 30730 | Lifecycle Demo | BLOCKED | Lifecycle demo blocked on semaphore
+Lifecycle demo blocked on semaphore | PID 30730 (Lifecycle Demo)
+02:50:25 | PID 30730 | Lifecycle Demo | READY | Lifecycle demo unblocked and returned to READY
+Lifecycle demo unblocked and returned to READY | PID 30730 (Lifecycle Demo)
+02:50:25 | PID 30730 | Lifecycle Demo | TERMINATED | Process terminated
+Terminated process PID 30730 (Lifecycle Demo)
+02:50:30 | PID 30725 | OS Concepts Lab | TERMINATED | Process terminated
+Terminated process PID 30725 (OS Concepts Lab)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+02:56:12 | PID 38251 | Terminal | RUNNING | Process created
+Created process PID 38251 (Terminal)
+02:56:14 | PID 38252 | Terminal | RUNNING | Process created
+Created process PID 38252 (Terminal)
+02:56:35 | PID 38253 | Logger | RUNNING | Process created
+Created process PID 38253 (Logger)
+02:56:42 | PID 38252 | Terminal | TERMINATED | Process terminated
+Terminated process PID 38252 (Terminal)
+02:56:44 | PID 38251 | Terminal | TERMINATED | Process terminated
+Terminated process PID 38251 (Terminal)
+02:56:47 | PID 38253 | Logger | TERMINATED | Process terminated
+Terminated process PID 38253 (Logger)
+02:56:48 | PID 38254 | Scheduler | RUNNING | Process created
+Created process PID 38254 (Scheduler)
+02:56:52 | PID 38254 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 38254 (Scheduler)
+02:56:54 | PID 38255 | Logger | RUNNING | Process created
+Created process PID 38255 (Logger)
+02:56:55 | PID 38255 | Logger | TERMINATED | Process terminated
+Terminated process PID 38255 (Logger)
+02:56:57 | PID 38256 | Railway Reservation | RUNNING | Process created
+Created process PID 38256 (Railway Reservation)
+02:57:38 | PID 38256 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 38256 (Railway Reservation)
+02:57:40 | PID 38257 | System Log | RUNNING | Process created
+Created process PID 38257 (System Log)
+02:57:46 | PID 38257 | System Log | TERMINATED | Process terminated
+Terminated process PID 38257 (System Log)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+02:59:15 | PID 38824 | Terminal | RUNNING | Process created
+Created process PID 38824 (Terminal)
+02:59:18 | PID 38825 | Terminal | RUNNING | Process created
+Created process PID 38825 (Terminal)
+02:59:20 | PID 38826 | Logger | RUNNING | Process created
+Created process PID 38826 (Logger)
+02:59:24 | PID 38825 | Terminal | TERMINATED | Process terminated
+Terminated process PID 38825 (Terminal)
+02:59:25 | PID 38824 | Terminal | TERMINATED | Process terminated
+Terminated process PID 38824 (Terminal)
+02:59:27 | PID 38826 | Logger | TERMINATED | Process terminated
+Terminated process PID 38826 (Logger)
+02:59:27 | PID 38827 | Scheduler | RUNNING | Process created
+Created process PID 38827 (Scheduler)
+02:59:31 | PID 38827 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 38827 (Scheduler)
+02:59:32 | PID 38828 | Railway Reservation | RUNNING | Process created
+Created process PID 38828 (Railway Reservation)
+02:59:50 | PID 38828 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 38828 (Railway Reservation)
+02:59:51 | PID 38829 | System Log | RUNNING | Process created
+Created process PID 38829 (System Log)
+02:59:53 | PID 38829 | System Log | TERMINATED | Process terminated
+Terminated process PID 38829 (System Log)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+13:28:13 | PID 27570 | Terminal | RUNNING | Process created
+Created process PID 27570 (Terminal)
+13:28:14 | PID 27570 | Terminal | TERMINATED | Process terminated
+Terminated process PID 27570 (Terminal)
+13:28:17 | PID 27571 | System Log | RUNNING | Process created
+Created process PID 27571 (System Log)
+13:28:18 | PID 27571 | System Log | TERMINATED | Process terminated
+Terminated process PID 27571 (System Log)
+13:28:19 | PID 27572 | Railway Reservation | RUNNING | Process created
+Created process PID 27572 (Railway Reservation)
+13:28:20 | PID 27572 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 27572 (Railway Reservation)
+13:28:21 | PID 27573 | Logger | RUNNING | Process created
+Created process PID 27573 (Logger)
+13:28:23 | PID 27573 | Logger | TERMINATED | Process terminated
+Terminated process PID 27573 (Logger)
+13:28:23 | PID 27574 | Scheduler | RUNNING | Process created
+Created process PID 27574 (Scheduler)
+13:28:24 | PID 27574 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 27574 (Scheduler)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Rejected process creation for Terminal due to insufficient memory
+Rejected process creation for System Log due to insufficient memory
+Rejected process creation for Railway Reservation due to insufficient memory
+Rejected process creation for Scheduler due to insufficient memory
+Rejected process creation for Logger due to insufficient memory
+Rejected process creation for Terminal due to insufficient memory
+Rejected process creation for Logger due to insufficient memory
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Rejected process creation for Terminal due to insufficient memory
+Rejected process creation for Logger due to insufficient memory
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Rejected process creation for Terminal due to insufficient memory
+Rejected process creation for Logger due to insufficient memory
+Rejected process creation for Scheduler due to insufficient memory
+Rejected process creation for Railway Reservation due to insufficient memory
+Rejected process creation for Scheduler due to insufficient memory
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Rejected process creation for Terminal due to insufficient memory
+Rejected process creation for Logger due to insufficient memory
+Rejected process creation for Scheduler due to insufficient memory
+Rejected process creation for Railway Reservation due to insufficient memory
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+14:15:39 | PID 47686 | Terminal | NEW | Process created
+14:15:39 | PID 47686 | Terminal | READY | Process admitted to ready queue
+Created process PID 47686 (Terminal)
+14:15:39 | PID 47686 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47686 (Terminal)
+14:15:39 | PID 47687 | Logger | NEW | Process created
+14:15:39 | PID 47687 | Logger | READY | Process admitted to ready queue
+Created process PID 47687 (Logger)
+14:15:39 | PID 47686 | Terminal | READY | Window moved to background
+Window moved to background | PID 47686 (Terminal)
+14:15:39 | PID 47687 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47687 (Logger)
+14:15:52 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:15:52 | PID 47686 | Terminal | READY | Window moved to background
+Window moved to background | PID 47686 (Terminal)
+14:15:52 | PID 47686 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47686 (Terminal)
+14:15:52 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:15:52 | PID 47686 | Terminal | READY | Window moved to background
+Window moved to background | PID 47686 (Terminal)
+14:15:52 | PID 47686 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47686 (Terminal)
+14:15:58 | PID 47686 | Terminal | READY | Window moved to background
+Window moved to background | PID 47686 (Terminal)
+14:15:58 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:15:58 | PID 47687 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47687 (Logger)
+14:16:01 | PID 47688 | Terminal | NEW | Process created
+14:16:01 | PID 47688 | Terminal | READY | Process admitted to ready queue
+Created process PID 47688 (Terminal)
+14:16:01 | PID 47686 | Terminal | READY | Window moved to background
+Window moved to background | PID 47686 (Terminal)
+14:16:01 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:16:01 | PID 47688 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47688 (Terminal)
+14:16:02 | PID 47686 | Terminal | READY | Window moved to background
+Window moved to background | PID 47686 (Terminal)
+14:16:02 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:16:02 | PID 47688 | Terminal | READY | Window moved to background
+Window moved to background | PID 47688 (Terminal)
+14:16:02 | PID 47688 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47688 (Terminal)
+14:16:03 | PID 47686 | Terminal | READY | Window moved to background
+Window moved to background | PID 47686 (Terminal)
+14:16:03 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:16:03 | PID 47688 | Terminal | READY | Window moved to background
+Window moved to background | PID 47688 (Terminal)
+14:16:03 | PID 47688 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47688 (Terminal)
+14:16:03 | PID 47686 | Terminal | TERMINATED | Process terminated
+Terminated process PID 47686 (Terminal)
+14:16:03 | PID 47688 | Terminal | TERMINATED | Process terminated
+Terminated process PID 47688 (Terminal)
+14:16:04 | PID 47689 | Scheduler | NEW | Process created
+14:16:04 | PID 47689 | Scheduler | READY | Process admitted to ready queue
+Created process PID 47689 (Scheduler)
+14:16:04 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:16:04 | PID 47689 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47689 (Scheduler)
+14:16:09 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:16:09 | PID 47689 | Scheduler | READY | Window moved to background
+Window moved to background | PID 47689 (Scheduler)
+14:16:09 | PID 47689 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47689 (Scheduler)
+14:16:09 | PID 47689 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 47689 (Scheduler)
+14:16:13 | PID 47687 | Logger | READY | Window moved to background
+Window moved to background | PID 47687 (Logger)
+14:16:13 | PID 47687 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47687 (Logger)
+14:16:13 | PID 47687 | Logger | TERMINATED | Process terminated
+Terminated process PID 47687 (Logger)
+14:16:15 | PID 47690 | Logger | NEW | Process created
+14:16:15 | PID 47690 | Logger | READY | Process admitted to ready queue
+Created process PID 47690 (Logger)
+14:16:15 | PID 47690 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47690 (Logger)
+14:16:15 | PID 47691 | Logger | NEW | Process created
+14:16:15 | PID 47691 | Logger | READY | Process admitted to ready queue
+Created process PID 47691 (Logger)
+14:16:15 | PID 47690 | Logger | READY | Window moved to background
+Window moved to background | PID 47690 (Logger)
+14:16:15 | PID 47691 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47691 (Logger)
+14:16:21 | PID 47690 | Logger | READY | Window moved to background
+Window moved to background | PID 47690 (Logger)
+14:16:21 | PID 47691 | Logger | READY | Window moved to background
+Window moved to background | PID 47691 (Logger)
+14:16:21 | PID 47691 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47691 (Logger)
+14:16:22 | PID 47690 | Logger | READY | Window moved to background
+Window moved to background | PID 47690 (Logger)
+14:16:22 | PID 47691 | Logger | READY | Window moved to background
+Window moved to background | PID 47691 (Logger)
+14:16:22 | PID 47691 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47691 (Logger)
+14:16:30 | PID 47690 | Logger | READY | Window moved to background
+Window moved to background | PID 47690 (Logger)
+14:16:30 | PID 47691 | Logger | READY | Window moved to background
+Window moved to background | PID 47691 (Logger)
+14:16:30 | PID 47691 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 47691 (Logger)
+14:16:30 | PID 47690 | Logger | TERMINATED | Process terminated
+Terminated process PID 47690 (Logger)
+14:16:30 | PID 47691 | Logger | TERMINATED | Process terminated
+Terminated process PID 47691 (Logger)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+11:10:35 | PID 1897 | Terminal | NEW | Process created
+11:10:35 | PID 1897 | Terminal | READY | Process admitted to ready queue
+Created process PID 1897 (Terminal)
+11:10:35 | PID 1897 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1897 (Terminal)
+11:10:36 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:36 | PID 1897 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1897 (Terminal)
+11:10:38 | PID 1898 | Terminal | NEW | Process created
+11:10:38 | PID 1898 | Terminal | READY | Process admitted to ready queue
+Created process PID 1898 (Terminal)
+11:10:38 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:38 | PID 1898 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1898 (Terminal)
+11:10:39 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:39 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:10:39 | PID 1898 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1898 (Terminal)
+11:10:40 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:10:40 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:40 | PID 1897 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1897 (Terminal)
+11:10:45 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:45 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:10:45 | PID 1898 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1898 (Terminal)
+11:10:50 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:50 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:10:50 | PID 1898 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1898 (Terminal)
+11:10:52 | PID 1899 | Logger | NEW | Process created
+11:10:52 | PID 1899 | Logger | READY | Process admitted to ready queue
+Created process PID 1899 (Logger)
+11:10:52 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:52 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:10:52 | PID 1899 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1899 (Logger)
+11:10:58 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:58 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:10:58 | PID 1899 | Logger | READY | Window moved to background
+Window moved to background | PID 1899 (Logger)
+11:10:58 | PID 1899 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1899 (Logger)
+11:10:58 | PID 1899 | Logger | TERMINATED | Process terminated
+Terminated process PID 1899 (Logger)
+11:10:59 | PID 1900 | Scheduler | NEW | Process created
+11:10:59 | PID 1900 | Scheduler | READY | Process admitted to ready queue
+Created process PID 1900 (Scheduler)
+11:10:59 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:10:59 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:10:59 | PID 1900 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1900 (Scheduler)
+11:11:06 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:11:06 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:11:06 | PID 1900 | Scheduler | READY | Window moved to background
+Window moved to background | PID 1900 (Scheduler)
+11:11:06 | PID 1900 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1900 (Scheduler)
+11:11:06 | PID 1900 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 1900 (Scheduler)
+11:11:08 | PID 1901 | Railway Reservation | NEW | Process created
+11:11:08 | PID 1901 | Railway Reservation | READY | Process admitted to ready queue
+Created process PID 1901 (Railway Reservation)
+11:11:08 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:11:08 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:11:08 | PID 1901 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1901 (Railway Reservation)
+11:11:10 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:11:10 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:11:10 | PID 1901 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 1901 (Railway Reservation)
+11:11:10 | PID 1901 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1901 (Railway Reservation)
+11:11:10 | PID 1901 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 1901 (Railway Reservation)
+11:11:11 | PID 1902 | System Log | NEW | Process created
+11:11:11 | PID 1902 | System Log | READY | Process admitted to ready queue
+Created process PID 1902 (System Log)
+11:11:11 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:11:11 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:11:11 | PID 1902 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1902 (System Log)
+11:11:13 | PID 1897 | Terminal | READY | Window moved to background
+Window moved to background | PID 1897 (Terminal)
+11:11:13 | PID 1898 | Terminal | READY | Window moved to background
+Window moved to background | PID 1898 (Terminal)
+11:11:13 | PID 1902 | System Log | READY | Window moved to background
+Window moved to background | PID 1902 (System Log)
+11:11:13 | PID 1902 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 1902 (System Log)
+11:11:13 | PID 1902 | System Log | TERMINATED | Process terminated
+Terminated process PID 1902 (System Log)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 9
+Memory manager attached
+00:29:49 | PID 12624 | Scheduler | NEW | Process created
+00:29:49 | PID 12624 | Scheduler | READY | Process admitted to ready queue
+Created process PID 12624 (Scheduler)
+00:29:49 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:29:51 | PID 12627 | Terminal | NEW | Process created
+00:29:51 | PID 12627 | Terminal | READY | Process admitted to ready queue
+Created process PID 12627 (Terminal)
+00:29:51 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:29:51 | PID 12627 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12627 (Terminal)
+00:29:52 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:29:52 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:29:52 | PID 12627 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12627 (Terminal)
+00:29:53 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:29:53 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:29:53 | PID 12627 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12627 (Terminal)
+00:30:01 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:01 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:01 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:30:01 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:01 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:01 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:30:04 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:04 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:04 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:30:07 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:07 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:07 | PID 12627 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12627 (Terminal)
+00:30:08 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:08 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:08 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:30:09 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:09 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:09 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:30:11 | PID 12630 | Terminal | NEW | Process created
+00:30:11 | PID 12630 | Terminal | READY | Process admitted to ready queue
+Created process PID 12630 (Terminal)
+00:30:11 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:11 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:11 | PID 12630 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12630 (Terminal)
+00:30:14 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:14 | PID 12630 | Terminal | READY | Window moved to background
+Window moved to background | PID 12630 (Terminal)
+00:30:14 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:14 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:30:17 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:17 | PID 12630 | Terminal | READY | Window moved to background
+Window moved to background | PID 12630 (Terminal)
+00:30:17 | PID 12624 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12624 (Scheduler)
+00:30:17 | PID 12624 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12624 (Scheduler)
+00:30:17 | PID 12624 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 12624 (Scheduler)
+00:30:19 | PID 12630 | Terminal | READY | Window moved to background
+Window moved to background | PID 12630 (Terminal)
+00:30:19 | PID 12627 | Terminal | READY | Window moved to background
+Window moved to background | PID 12627 (Terminal)
+00:30:19 | PID 12627 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12627 (Terminal)
+00:30:19 | PID 12627 | Terminal | TERMINATED | Process terminated
+Terminated process PID 12627 (Terminal)
+00:30:20 | PID 12630 | Terminal | READY | Window moved to background
+Window moved to background | PID 12630 (Terminal)
+00:30:20 | PID 12630 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12630 (Terminal)
+00:30:20 | PID 12630 | Terminal | TERMINATED | Process terminated
+Terminated process PID 12630 (Terminal)
+00:30:23 | PID 12631 | System Log | NEW | Process created
+00:30:23 | PID 12631 | System Log | READY | Process admitted to ready queue
+Created process PID 12631 (System Log)
+00:30:23 | PID 12631 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12631 (System Log)
+00:30:25 | PID 12631 | System Log | READY | Window moved to background
+Window moved to background | PID 12631 (System Log)
+00:30:25 | PID 12631 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12631 (System Log)
+00:30:25 | PID 12631 | System Log | TERMINATED | Process terminated
+Terminated process PID 12631 (System Log)
+00:30:52 | PID 12636 | Scheduler | NEW | Process created
+00:30:52 | PID 12636 | Scheduler | READY | Process admitted to ready queue
+Created process PID 12636 (Scheduler)
+00:30:52 | PID 12636 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12636 (Scheduler)
+00:30:55 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:30:55 | PID 12636 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12636 (Scheduler)
+00:30:56 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:30:56 | PID 12636 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12636 (Scheduler)
+00:30:58 | PID 12637 | Terminal | NEW | Process created
+00:30:58 | PID 12637 | Terminal | READY | Process admitted to ready queue
+Created process PID 12637 (Terminal)
+00:30:58 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:30:58 | PID 12637 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12637 (Terminal)
+00:30:59 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:30:59 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:30:59 | PID 12637 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12637 (Terminal)
+00:31:00 | PID 12638 | Terminal | NEW | Process created
+00:31:00 | PID 12638 | Terminal | READY | Process admitted to ready queue
+Created process PID 12638 (Terminal)
+00:31:00 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:00 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:00 | PID 12638 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12638 (Terminal)
+00:31:01 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:01 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:01 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:01 | PID 12638 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12638 (Terminal)
+00:31:02 | PID 12639 | Terminal | NEW | Process created
+00:31:02 | PID 12639 | Terminal | READY | Process admitted to ready queue
+Created process PID 12639 (Terminal)
+00:31:02 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:02 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:02 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:02 | PID 12639 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12639 (Terminal)
+00:31:03 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:03 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:03 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:03 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:03 | PID 12639 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12639 (Terminal)
+00:31:05 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:05 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:05 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:05 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:05 | PID 12639 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12639 (Terminal)
+00:31:06 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:06 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:06 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:06 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:06 | PID 12639 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12639 (Terminal)
+00:31:07 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:07 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:07 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:07 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:07 | PID 12639 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12639 (Terminal)
+00:31:21 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:21 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:21 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:21 | PID 12637 | Terminal | READY | Window moved to background
+Window moved to background | PID 12637 (Terminal)
+00:31:21 | PID 12637 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12637 (Terminal)
+00:31:21 | PID 12637 | Terminal | TERMINATED | Process terminated
+Terminated process PID 12637 (Terminal)
+00:31:24 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:24 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:24 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:24 | PID 12639 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12639 (Terminal)
+00:31:31 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:31 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:31 | PID 12638 | Terminal | READY | Window moved to background
+Window moved to background | PID 12638 (Terminal)
+00:31:31 | PID 12638 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12638 (Terminal)
+00:31:31 | PID 12638 | Terminal | TERMINATED | Process terminated
+Terminated process PID 12638 (Terminal)
+00:31:32 | PID 12636 | Scheduler | READY | Window moved to background
+Window moved to background | PID 12636 (Scheduler)
+00:31:32 | PID 12639 | Terminal | READY | Window moved to background
+Window moved to background | PID 12639 (Terminal)
+00:31:32 | PID 12639 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 12639 (Terminal)
+00:31:32 | PID 12639 | Terminal | TERMINATED | Process terminated
+Terminated process PID 12639 (Terminal)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 10
+Memory manager attached
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+02:08:29 | PID 28135 | System Log | NEW | Process created
+02:08:29 | PID 28135 | System Log | READY | Process admitted to ready queue
+Created process PID 28135 (System Log)
+02:08:29 | PID 28135 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 28135 (System Log)
+02:08:31 | PID 28135 | System Log | READY | Window moved to background
+Window moved to background | PID 28135 (System Log)
+02:08:31 | PID 28135 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 28135 (System Log)
+02:08:31 | PID 28135 | System Log | TERMINATED | Process terminated
+Terminated process PID 28135 (System Log)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to Round Robin
+Time quantum set to 3
+CPU core budget set to 8
+Memory manager attached
+02:38:39 | PID 35067 | Scheduler | NEW | Process created
+02:38:39 | PID 35067 | Scheduler | READY | Process admitted to ready queue
+Created process PID 35067 (Scheduler)
+02:38:39 | PID 35067 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35067 (Scheduler)
+02:38:42 | PID 35067 | Scheduler | READY | Window moved to background
+Window moved to background | PID 35067 (Scheduler)
+02:38:42 | PID 35067 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35067 (Scheduler)
+02:38:42 | PID 35067 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 35067 (Scheduler)
+02:38:43 | PID 35069 | Railway Reservation | NEW | Process created
+02:38:43 | PID 35069 | Railway Reservation | READY | Process admitted to ready queue
+Created process PID 35069 (Railway Reservation)
+02:38:43 | PID 35069 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35069 (Railway Reservation)
+02:38:46 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:38:46 | PID 35069 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35069 (Railway Reservation)
+02:38:47 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:38:47 | PID 35069 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35069 (Railway Reservation)
+02:38:48 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:38:48 | PID 35069 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35069 (Railway Reservation)
+02:38:52 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:38:52 | PID 35069 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35069 (Railway Reservation)
+02:38:54 | PID 35070 | Scheduler | NEW | Process created
+02:38:54 | PID 35070 | Scheduler | READY | Process admitted to ready queue
+Created process PID 35070 (Scheduler)
+02:38:54 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:38:54 | PID 35070 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35070 (Scheduler)
+02:38:55 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:38:55 | PID 35070 | Scheduler | READY | Window moved to background
+Window moved to background | PID 35070 (Scheduler)
+02:38:55 | PID 35070 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35070 (Scheduler)
+02:38:59 | PID 35070 | Scheduler | READY | Window moved to background
+Window moved to background | PID 35070 (Scheduler)
+02:38:59 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:38:59 | PID 35069 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35069 (Railway Reservation)
+02:39:02 | PID 35070 | Scheduler | READY | Window moved to background
+Window moved to background | PID 35070 (Scheduler)
+02:39:02 | PID 35069 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 35069 (Railway Reservation)
+02:39:02 | PID 35069 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35069 (Railway Reservation)
+02:39:02 | PID 35069 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 35069 (Railway Reservation)
+02:39:04 | PID 35070 | Scheduler | READY | Window moved to background
+Window moved to background | PID 35070 (Scheduler)
+02:39:04 | PID 35070 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35070 (Scheduler)
+02:39:04 | PID 35070 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 35070 (Scheduler)
+02:39:05 | PID 35074 | Terminal | NEW | Process created
+02:39:05 | PID 35074 | Terminal | READY | Process admitted to ready queue
+Created process PID 35074 (Terminal)
+02:39:05 | PID 35074 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35074 (Terminal)
+02:39:08 | PID 35074 | Terminal | READY | Window moved to background
+Window moved to background | PID 35074 (Terminal)
+02:39:08 | PID 35074 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35074 (Terminal)
+02:39:08 | PID 35074 | Terminal | TERMINATED | Process terminated
+Terminated process PID 35074 (Terminal)
+02:39:10 | PID 35075 | Logger | NEW | Process created
+02:39:10 | PID 35075 | Logger | READY | Process admitted to ready queue
+Created process PID 35075 (Logger)
+02:39:10 | PID 35075 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35075 (Logger)
+02:39:12 | PID 35075 | Logger | READY | Window moved to background
+Window moved to background | PID 35075 (Logger)
+02:39:12 | PID 35075 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 35075 (Logger)
+02:39:12 | PID 35075 | Logger | TERMINATED | Process terminated
+Terminated process PID 35075 (Logger)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Process Manager initialized
+Process Manager state cleared
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+02:45:43 | PID 36717 | System Log | NEW | Process created
+02:45:43 | PID 36717 | System Log | READY | Process admitted to ready queue
+Created process PID 36717 (System Log)
+02:45:43 | PID 36717 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 36717 (System Log)
+02:45:45 | PID 36717 | System Log | READY | Window moved to background
+Window moved to background | PID 36717 (System Log)
+02:45:45 | PID 36717 | System Log | RUNNING | Window moved to foreground
+Window moved to foreground | PID 36717 (System Log)
+02:45:45 | PID 36717 | System Log | TERMINATED | Process terminated
+Terminated process PID 36717 (System Log)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+02:49:28 | PID 40904 | Terminal | NEW | Process created
+02:49:28 | PID 40904 | Terminal | READY | Process admitted to ready queue
+Created process PID 40904 (Terminal)
+02:49:28 | PID 40904 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 40904 (Terminal)
+02:49:29 | PID 40904 | Terminal | READY | Window moved to background
+Window moved to background | PID 40904 (Terminal)
+02:49:29 | PID 40904 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 40904 (Terminal)
+02:49:29 | PID 40904 | Terminal | TERMINATED | Process terminated
+Terminated process PID 40904 (Terminal)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 10
+Memory manager attached
+03:35:24 | PID 97585 | Terminal | NEW | Process created
+03:35:24 | PID 97585 | Terminal | READY | Process admitted to ready queue
+Created process PID 97585 (Terminal)
+03:35:24 | PID 97585 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97585 (Terminal)
+03:35:25 | PID 97585 | Terminal | READY | Window moved to background
+Window moved to background | PID 97585 (Terminal)
+03:35:25 | PID 97585 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97585 (Terminal)
+03:35:25 | PID 97585 | Terminal | TERMINATED | Process terminated
+Terminated process PID 97585 (Terminal)
+03:35:26 | PID 97586 | Logger | NEW | Process created
+03:35:26 | PID 97586 | Logger | READY | Process admitted to ready queue
+Created process PID 97586 (Logger)
+03:35:26 | PID 97586 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97586 (Logger)
+03:35:28 | PID 97587 | Terminal | NEW | Process created
+03:35:28 | PID 97587 | Terminal | READY | Process admitted to ready queue
+Created process PID 97587 (Terminal)
+03:35:28 | PID 97586 | Logger | READY | Window moved to background
+Window moved to background | PID 97586 (Logger)
+03:35:28 | PID 97587 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97587 (Terminal)
+03:35:28 | PID 97586 | Logger | READY | Window moved to background
+Window moved to background | PID 97586 (Logger)
+03:35:28 | PID 97587 | Terminal | READY | Window moved to background
+Window moved to background | PID 97587 (Terminal)
+03:35:28 | PID 97587 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97587 (Terminal)
+03:35:30 | PID 97588 | Terminal | NEW | Process created
+03:35:30 | PID 97588 | Terminal | READY | Process admitted to ready queue
+Created process PID 97588 (Terminal)
+03:35:30 | PID 97586 | Logger | READY | Window moved to background
+Window moved to background | PID 97586 (Logger)
+03:35:30 | PID 97587 | Terminal | READY | Window moved to background
+Window moved to background | PID 97587 (Terminal)
+03:35:30 | PID 97588 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97588 (Terminal)
+03:35:31 | PID 97586 | Logger | READY | Window moved to background
+Window moved to background | PID 97586 (Logger)
+03:35:31 | PID 97587 | Terminal | READY | Window moved to background
+Window moved to background | PID 97587 (Terminal)
+03:35:31 | PID 97588 | Terminal | READY | Window moved to background
+Window moved to background | PID 97588 (Terminal)
+03:35:31 | PID 97588 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97588 (Terminal)
+03:35:32 | PID 97587 | Terminal | READY | Window moved to background
+Window moved to background | PID 97587 (Terminal)
+03:35:32 | PID 97588 | Terminal | READY | Window moved to background
+Window moved to background | PID 97588 (Terminal)
+03:35:32 | PID 97586 | Logger | READY | Window moved to background
+Window moved to background | PID 97586 (Logger)
+03:35:32 | PID 97586 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97586 (Logger)
+03:35:34 | PID 97587 | Terminal | READY | Window moved to background
+Window moved to background | PID 97587 (Terminal)
+03:35:34 | PID 97588 | Terminal | READY | Window moved to background
+Window moved to background | PID 97588 (Terminal)
+03:35:34 | PID 97586 | Logger | READY | Window moved to background
+Window moved to background | PID 97586 (Logger)
+03:35:34 | PID 97586 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97586 (Logger)
+03:35:34 | PID 97586 | Logger | TERMINATED | Process terminated
+Terminated process PID 97586 (Logger)
+03:35:35 | PID 97587 | Terminal | READY | Window moved to background
+Window moved to background | PID 97587 (Terminal)
+03:35:35 | PID 97588 | Terminal | READY | Window moved to background
+Window moved to background | PID 97588 (Terminal)
+03:35:35 | PID 97588 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97588 (Terminal)
+03:35:35 | PID 97588 | Terminal | TERMINATED | Process terminated
+Terminated process PID 97588 (Terminal)
+03:35:37 | PID 97587 | Terminal | READY | Window moved to background
+Window moved to background | PID 97587 (Terminal)
+03:35:37 | PID 97587 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97587 (Terminal)
+03:35:37 | PID 97587 | Terminal | TERMINATED | Process terminated
+Terminated process PID 97587 (Terminal)
+03:35:38 | PID 97589 | Scheduler | NEW | Process created
+03:35:38 | PID 97589 | Scheduler | READY | Process admitted to ready queue
+Created process PID 97589 (Scheduler)
+03:35:38 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:42 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:42 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:43 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:43 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:45 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:45 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:45 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:45 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:49 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:50 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:50 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:50 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:50 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:50 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:50 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:51 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:51 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:51 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:51 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:52 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:52 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:52 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:52 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:35:57 | PID 97592 | Terminal | NEW | Process created
+03:35:57 | PID 97592 | Terminal | READY | Process admitted to ready queue
+Created process PID 97592 (Terminal)
+03:35:57 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:57 | PID 97592 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97592 (Terminal)
+03:35:59 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:35:59 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:35:59 | PID 97592 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97592 (Terminal)
+03:36:09 | PID 97593 | Logger | NEW | Process created
+03:36:09 | PID 97593 | Logger | READY | Process admitted to ready queue
+Created process PID 97593 (Logger)
+03:36:09 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:09 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:09 | PID 97593 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97593 (Logger)
+03:36:10 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:10 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:10 | PID 97593 | Logger | READY | Window moved to background
+Window moved to background | PID 97593 (Logger)
+03:36:10 | PID 97593 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97593 (Logger)
+03:36:14 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:14 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:14 | PID 97593 | Logger | READY | Window moved to background
+Window moved to background | PID 97593 (Logger)
+03:36:14 | PID 97593 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97593 (Logger)
+03:36:15 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:15 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:15 | PID 97593 | Logger | READY | Window moved to background
+Window moved to background | PID 97593 (Logger)
+03:36:15 | PID 97593 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97593 (Logger)
+03:36:16 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:16 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:16 | PID 97593 | Logger | READY | Window moved to background
+Window moved to background | PID 97593 (Logger)
+03:36:16 | PID 97593 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97593 (Logger)
+03:36:16 | PID 97593 | Logger | TERMINATED | Process terminated
+Terminated process PID 97593 (Logger)
+03:36:18 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:18 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:18 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:36:20 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:20 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:20 | PID 97592 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97592 (Terminal)
+03:36:22 | PID 97594 | Logger | NEW | Process created
+03:36:22 | PID 97594 | Logger | READY | Process admitted to ready queue
+Created process PID 97594 (Logger)
+03:36:22 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:22 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:22 | PID 97594 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97594 (Logger)
+03:36:24 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:24 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:24 | PID 97594 | Logger | READY | Window moved to background
+Window moved to background | PID 97594 (Logger)
+03:36:24 | PID 97594 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97594 (Logger)
+03:36:24 | PID 97594 | Logger | TERMINATED | Process terminated
+Terminated process PID 97594 (Logger)
+03:36:29 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:29 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:29 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:36:33 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:33 | PID 97589 | Scheduler | READY | Window moved to background
+Window moved to background | PID 97589 (Scheduler)
+03:36:33 | PID 97589 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97589 (Scheduler)
+03:36:33 | PID 97589 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 97589 (Scheduler)
+03:36:34 | PID 97592 | Terminal | READY | Window moved to background
+Window moved to background | PID 97592 (Terminal)
+03:36:34 | PID 97592 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 97592 (Terminal)
+03:36:34 | PID 97592 | Terminal | TERMINATED | Process terminated
+Terminated process PID 97592 (Terminal)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to Round Robin
+Time quantum set to 3
+CPU core budget set to 8
+Memory manager attached
+03:56:40 | PID 105984 | Scheduler | NEW | Process created
+03:56:40 | PID 105984 | Scheduler | READY | Process admitted to ready queue
+Created process PID 105984 (Scheduler)
+03:56:40 | PID 105984 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105984 (Scheduler)
+03:56:42 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:42 | PID 105984 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105984 (Scheduler)
+03:56:44 | PID 105985 | Terminal | NEW | Process created
+03:56:44 | PID 105985 | Terminal | READY | Process admitted to ready queue
+Created process PID 105985 (Terminal)
+03:56:44 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:44 | PID 105985 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105985 (Terminal)
+03:56:45 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:45 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:56:45 | PID 105985 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105985 (Terminal)
+03:56:53 | PID 105986 | Terminal | NEW | Process created
+03:56:53 | PID 105986 | Terminal | READY | Process admitted to ready queue
+Created process PID 105986 (Terminal)
+03:56:53 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:53 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:56:53 | PID 105986 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105986 (Terminal)
+03:56:54 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:54 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:56:54 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:56:54 | PID 105986 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105986 (Terminal)
+03:56:56 | PID 105987 | Logger | NEW | Process created
+03:56:56 | PID 105987 | Logger | READY | Process admitted to ready queue
+Created process PID 105987 (Logger)
+03:56:56 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:56 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:56:56 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:56:56 | PID 105987 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105987 (Logger)
+03:56:57 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:57 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:56:57 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:56:57 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:56:57 | PID 105987 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105987 (Logger)
+03:56:58 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:56:58 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:56:58 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:56:58 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:56:58 | PID 105987 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105987 (Logger)
+03:57:01 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:01 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:01 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:01 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:01 | PID 105987 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105987 (Logger)
+Rejected process creation for Scheduler due to insufficient memory
+03:57:03 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:03 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:03 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:03 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+Rejected process creation for Logger due to insufficient memory
+03:57:11 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:11 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:11 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:11 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:14 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:14 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:14 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:14 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:14 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:14 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:14 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:14 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:16 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:16 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:16 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:16 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:17 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:17 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:17 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:17 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:18 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:18 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:18 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:18 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:26 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:26 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:26 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:26 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:39 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:39 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:39 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:39 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:43 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:43 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:43 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:43 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:46 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:46 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:46 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:46 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:47 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:47 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:47 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:47 | PID 105987 | Logger | READY | Window moved to background
+Window moved to background | PID 105987 (Logger)
+03:57:47 | PID 105987 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105987 (Logger)
+03:57:47 | PID 105987 | Logger | TERMINATED | Process terminated
+Terminated process PID 105987 (Logger)
+03:57:49 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:49 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:49 | PID 105985 | Terminal | READY | Window moved to background
+Window moved to background | PID 105985 (Terminal)
+03:57:49 | PID 105985 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105985 (Terminal)
+03:57:49 | PID 105985 | Terminal | TERMINATED | Process terminated
+Terminated process PID 105985 (Terminal)
+03:57:51 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:51 | PID 105984 | Scheduler | READY | Window moved to background
+Window moved to background | PID 105984 (Scheduler)
+03:57:51 | PID 105984 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105984 (Scheduler)
+03:57:51 | PID 105984 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 105984 (Scheduler)
+03:57:53 | PID 105986 | Terminal | READY | Window moved to background
+Window moved to background | PID 105986 (Terminal)
+03:57:53 | PID 105986 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105986 (Terminal)
+03:57:53 | PID 105986 | Terminal | TERMINATED | Process terminated
+Terminated process PID 105986 (Terminal)
+03:57:54 | PID 105990 | Logger | NEW | Process created
+03:57:54 | PID 105990 | Logger | READY | Process admitted to ready queue
+Created process PID 105990 (Logger)
+03:57:54 | PID 105990 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105990 (Logger)
+03:57:56 | PID 105991 | Terminal | NEW | Process created
+03:57:56 | PID 105991 | Terminal | READY | Process admitted to ready queue
+Created process PID 105991 (Terminal)
+03:57:56 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:57:56 | PID 105991 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105991 (Terminal)
+03:57:57 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:57:57 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:57:57 | PID 105991 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105991 (Terminal)
+03:58:00 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:00 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:00 | PID 105990 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105990 (Logger)
+03:58:03 | PID 105994 | Terminal | NEW | Process created
+03:58:03 | PID 105994 | Terminal | READY | Process admitted to ready queue
+Created process PID 105994 (Terminal)
+03:58:03 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:03 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:03 | PID 105994 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105994 (Terminal)
+03:58:04 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:04 | PID 105994 | Terminal | READY | Window moved to background
+Window moved to background | PID 105994 (Terminal)
+03:58:04 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:04 | PID 105990 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105990 (Logger)
+03:58:06 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:06 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:06 | PID 105994 | Terminal | READY | Window moved to background
+Window moved to background | PID 105994 (Terminal)
+03:58:06 | PID 105994 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105994 (Terminal)
+03:58:09 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:09 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:09 | PID 105994 | Terminal | READY | Window moved to background
+Window moved to background | PID 105994 (Terminal)
+03:58:09 | PID 105994 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105994 (Terminal)
+03:58:35 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:35 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:35 | PID 105994 | Terminal | READY | Window moved to background
+Window moved to background | PID 105994 (Terminal)
+03:58:35 | PID 105994 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105994 (Terminal)
+03:58:35 | PID 105994 | Terminal | TERMINATED | Process terminated
+Terminated process PID 105994 (Terminal)
+03:58:37 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:37 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:37 | PID 105991 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105991 (Terminal)
+03:58:39 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:39 | PID 105990 | Logger | READY | Window moved to background
+Window moved to background | PID 105990 (Logger)
+03:58:39 | PID 105990 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105990 (Logger)
+03:58:39 | PID 105990 | Logger | TERMINATED | Process terminated
+Terminated process PID 105990 (Logger)
+03:58:40 | PID 105991 | Terminal | READY | Window moved to background
+Window moved to background | PID 105991 (Terminal)
+03:58:40 | PID 105991 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 105991 (Terminal)
+03:58:40 | PID 105991 | Terminal | TERMINATED | Process terminated
+Terminated process PID 105991 (Terminal)
+Process Manager shutting down
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 8
+Memory manager attached
+09:50:30 | PID 126939 | Scheduler | NEW | Process created
+09:50:30 | PID 126939 | Scheduler | READY | Process admitted to ready queue
+Created process PID 126939 (Scheduler)
+09:50:30 | PID 126939 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126939 (Scheduler)
+09:50:32 | PID 126940 | Logger | NEW | Process created
+09:50:32 | PID 126940 | Logger | READY | Process admitted to ready queue
+Created process PID 126940 (Logger)
+09:50:32 | PID 126939 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126939 (Scheduler)
+09:50:32 | PID 126940 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126940 (Logger)
+09:50:32 | PID 126939 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126939 (Scheduler) to CPU
+09:50:33 | PID 126939 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126939 (Scheduler)
+09:50:33 | PID 126940 | Logger | READY | Window moved to background
+Window moved to background | PID 126940 (Logger)
+09:50:33 | PID 126940 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126940 (Logger)
+09:50:33 | PID 126939 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126939 (Scheduler) to CPU
+09:50:35 | PID 126939 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126939 (Scheduler)
+09:50:35 | PID 126940 | Logger | READY | Window moved to background
+Window moved to background | PID 126940 (Logger)
+09:50:35 | PID 126940 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126940 (Logger)
+09:50:35 | PID 126939 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 126939 (Scheduler)
+09:50:35 | PID 126940 | Logger | TERMINATED | Process terminated
+Terminated process PID 126940 (Logger)
+09:50:36 | PID 126941 | Scheduler | NEW | Process created
+09:50:36 | PID 126941 | Scheduler | READY | Process admitted to ready queue
+Created process PID 126941 (Scheduler)
+09:50:36 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:50:37 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:37 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:50:38 | PID 126942 | Terminal | NEW | Process created
+09:50:38 | PID 126942 | Terminal | READY | Process admitted to ready queue
+Created process PID 126942 (Terminal)
+09:50:38 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:38 | PID 126942 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126942 (Terminal)
+09:50:38 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:50:40 | PID 126945 | Terminal | NEW | Process created
+09:50:40 | PID 126945 | Terminal | READY | Process admitted to ready queue
+Created process PID 126945 (Terminal)
+09:50:40 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:40 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:50:40 | PID 126945 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126945 (Terminal)
+09:50:40 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:50:42 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:50:42 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:50:42 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:42 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:50:44 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:50:44 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:44 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:50:44 | PID 126945 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126945 (Terminal)
+09:50:44 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:50:45 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:50:45 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:45 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:50:45 | PID 126945 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126945 (Terminal)
+09:50:45 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:50:46 | PID 126947 | Terminal | NEW | Process created
+09:50:46 | PID 126947 | Terminal | READY | Process admitted to ready queue
+Created process PID 126947 (Terminal)
+09:50:46 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:50:46 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:46 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:50:46 | PID 126947 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126947 (Terminal)
+09:50:46 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:50:51 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:50:51 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:50:51 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:50:51 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:51 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:50:53 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:50:53 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:50:53 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:50:53 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:50:53 | PID 126947 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126947 (Terminal)
+09:50:53 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+Rejected process creation for Logger due to insufficient memory
+09:51:00 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:00 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:00 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:00 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:00 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:02 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:02 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:02 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:02 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:02 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:04 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:04 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:04 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:04 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:04 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:10 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:10 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:10 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:10 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:10 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:51:11 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:11 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:11 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:11 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:11 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:14 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:14 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:14 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:14 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:14 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:51:16 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:16 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:16 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:16 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:16 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:18 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:18 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:18 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:18 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:18 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:19 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:19 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:19 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:19 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:19 | PID 126947 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126947 (Terminal)
+09:51:19 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:21 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:21 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:21 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:21 | PID 126947 | Terminal | READY | Window moved to background
+Window moved to background | PID 126947 (Terminal)
+09:51:21 | PID 126947 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126947 (Terminal)
+09:51:21 | PID 126947 | Terminal | TERMINATED | Process terminated
+Terminated process PID 126947 (Terminal)
+09:51:21 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:23 | PID 126952 | Logger | NEW | Process created
+09:51:23 | PID 126952 | Logger | READY | Process admitted to ready queue
+Created process PID 126952 (Logger)
+09:51:23 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:23 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:23 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:23 | PID 126952 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126952 (Logger)
+09:51:23 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:25 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:25 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:25 | PID 126952 | Logger | READY | Window moved to background
+Window moved to background | PID 126952 (Logger)
+09:51:25 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:25 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:51:27 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:27 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:27 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:27 | PID 126952 | Logger | READY | Window moved to background
+Window moved to background | PID 126952 (Logger)
+09:51:27 | PID 126952 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126952 (Logger)
+09:51:27 | PID 126941 | Scheduler | RUNNING | Process dispatched to CPU
+Dispatched PID 126941 (Scheduler) to CPU
+09:51:30 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:30 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:30 | PID 126952 | Logger | READY | Window moved to background
+Window moved to background | PID 126952 (Logger)
+09:51:30 | PID 126941 | Scheduler | READY | Window moved to background
+Window moved to background | PID 126941 (Scheduler)
+09:51:30 | PID 126941 | Scheduler | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126941 (Scheduler)
+09:51:30 | PID 126941 | Scheduler | TERMINATED | Process terminated
+Terminated process PID 126941 (Scheduler)
+09:51:30 | PID 126942 | Terminal | RUNNING | Process dispatched to CPU
+Dispatched PID 126942 (Terminal) to CPU
+09:51:32 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:32 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:32 | PID 126952 | Logger | READY | Window moved to background
+Window moved to background | PID 126952 (Logger)
+09:51:32 | PID 126952 | Logger | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126952 (Logger)
+09:51:32 | PID 126952 | Logger | TERMINATED | Process terminated
+Terminated process PID 126952 (Logger)
+09:51:32 | PID 126942 | Terminal | RUNNING | Process dispatched to CPU
+Dispatched PID 126942 (Terminal) to CPU
+09:51:33 | PID 126942 | Terminal | READY | Window moved to background
+Window moved to background | PID 126942 (Terminal)
+09:51:33 | PID 126945 | Terminal | READY | Window moved to background
+Window moved to background | PID 126945 (Terminal)
+09:51:33 | PID 126945 | Terminal | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126945 (Terminal)
+09:51:33 | PID 126942 | Terminal | TERMINATED | Process terminated
+Terminated process PID 126942 (Terminal)
+09:51:33 | PID 126945 | Terminal | TERMINATED | Process terminated
+Terminated process PID 126945 (Terminal)
+09:51:34 | PID 126953 | Railway Reservation | NEW | Process created
+09:51:34 | PID 126953 | Railway Reservation | READY | Process admitted to ready queue
+Created process PID 126953 (Railway Reservation)
+09:51:34 | PID 126953 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126953 (Railway Reservation)
+09:51:36 | PID 126953 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 126953 (Railway Reservation)
+09:51:36 | PID 126953 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126953 (Railway Reservation)
+09:51:39 | PID 126953 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 126953 (Railway Reservation)
+09:51:39 | PID 126953 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126953 (Railway Reservation)
+09:51:45 | PID 126953 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 126953 (Railway Reservation)
+09:51:45 | PID 126953 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126953 (Railway Reservation)
+09:51:45 | PID 126956 | Booking Request | NEW | Process created
+09:51:45 | PID 126956 | Booking Request | READY | Process admitted to ready queue
+Created process PID 126956 (Booking Request)
+09:51:45 | PID 126956 | Booking Request | RUNNING | Booking Request started
+Booking Request started | PID 126956 (Booking Request)
+09:51:45 | PID 126956 | Booking Request | RUNNING | Booking request running in critical section
+Booking request running in critical section | PID 126956 (Booking Request)
+09:51:45 | PID 126956 | Booking Request | TERMINATED | Process terminated
+Terminated process PID 126956 (Booking Request)
+09:51:49 | PID 126953 | Railway Reservation | READY | Window moved to background
+Window moved to background | PID 126953 (Railway Reservation)
+09:51:49 | PID 126953 | Railway Reservation | RUNNING | Window moved to foreground
+Window moved to foreground | PID 126953 (Railway Reservation)
+09:51:49 | PID 126953 | Railway Reservation | TERMINATED | Process terminated
+Terminated process PID 126953 (Railway Reservation)
+Process Manager shutting down

@@ -2,6 +2,8 @@
 #include "raylib.h"
 #include <string>
 
+using namespace std;
+
 class SystemConfig {
 public:
 	enum class SchedulingAlgorithm {
@@ -10,10 +12,10 @@ public:
 	};
 
 private:
-	std::string ramGB;
-	std::string cpuCores;
-	std::string storageGB;
-	std::string timeQuantum;
+	string ramGB;
+	string cpuCores;
+	string storageGB;
+	string timeQuantum;
 
 	SchedulingAlgorithm algorithm;
 

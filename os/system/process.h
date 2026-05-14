@@ -15,6 +15,7 @@ enum ProcessState {
 	NEW,
 	READY,
 	RUNNING,
+	BLOCKED,
 	WAITING,
 	TERMINATED
 };
@@ -26,6 +27,7 @@ public:
 	ProcessState state;
 	
 	int memoryUsage;
+	int timeQuantumUsed;  // Track CPU time used in current quantum (ms)
 
 	Process(process_id_t p, const string& n, ProcessState s);
 };

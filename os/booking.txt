@@ -1,0 +1,5 @@
+1|CANCELLED|1|2|lhr|pkr|1012
+2|CANCELLED|12|231|pkr|asd|213
+3|CANCELLED|21|123|sd|sdd|2312
+4|BOOKED|2|231|13|asd|1231
+5|BOOKED|dslkA|lkasd|laskd|laksd|123

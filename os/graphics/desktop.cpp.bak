@@ -1,6 +1,5 @@
 #include "desktop.h"
 #include <algorithm>
-using namespace std;
 
 
 Desktop::Desktop(Memory* mem, ProcessManager* pm, int cpuCores, int storageGB) {
@@ -217,7 +216,7 @@ void Desktop::update() {
         win->update();
     }
 
-    windows.erase(remove_if(windows.begin(), windows.end(), [this](Window* win) {
+    windows.erase(std::remove_if(windows.begin(), windows.end(), [this](Window* win) {
         if (win->isActive()) {
             return false;
         }

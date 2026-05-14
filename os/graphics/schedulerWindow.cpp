@@ -1,5 +1,38 @@
 #include "schedulerWindow.h"
 #include <algorithm>
+#include <ctime>
+#include <vector>
+using namespace std;
+
+namespace {
+    Color ColorForPid(process_id_t pid) {
+        static const Color palette[] = {
+            { 96, 176, 255, 255 },
+            { 112, 225, 165, 255 },
+            { 255, 200, 108, 255 },
+            { 233, 148, 255, 255 },
+            { 255, 146, 120, 255 },
+            { 132, 208, 255, 255 }
+        };
+
+        return palette[(size_t)((unsigned long long)pid % (sizeof(palette) / sizeof(palette[0])))];
+    }
+
+    const ProcessActivity* FindCurrentRunningSlice(const vector<ProcessActivity>& log) {
+        for (auto it = log.rbegin(); it != log.rend(); ++it) {
+            if (it->state == RUNNING && it->endTime == 0) {
+                return &*it;
+            }
+        }
+        return nullptr;
+    }
+
+    float ActivityWeight(const ProcessActivity& activity, time_t now) {
+        time_t endTime = activity.endTime != 0 ? activity.endTime : now;
+        double elapsedSeconds = difftime(endTime, activity.startTime);
+        return (float)max(1.0, elapsedSeconds);
+    }
+}
 
 SchedulerWindow::SchedulerWindow(ProcessManager* pm, process_id_t processId)
     : Window(220, 80, 880, 560, "Scheduler Monitor") {
@@ -18,9 +51,8 @@ void SchedulerWindow::update() {
 
     Vector2 mouse = GetMousePosition();
     Rectangle body = { bounds.x + 10, bounds.y + 40, bounds.width - 20, bounds.height - 50 };
-    Rectangle algorithmCard = { body.x + 10, body.y + 10, body.width - 20, 78 };
-    Rectangle queuePanel = { body.x + 10, body.y + 100, body.width * 0.46f - 15, body.height - 110 };
-    Rectangle tablePanel = { queuePanel.x + queuePanel.width + 10, body.y + 100, body.width - queuePanel.width - 30, body.height - 110 };
+    Rectangle queuePanel = { body.x + 10, body.y + 238, body.width * 0.46f - 15, body.height - 248 };
+    Rectangle tablePanel = { queuePanel.x + queuePanel.width + 10, queuePanel.y, body.width - queuePanel.width - 30, queuePanel.height };
 
     if (isFocused()) {
         float wheel = GetMouseWheelMove();
@@ -43,8 +75,8 @@ void SchedulerWindow::update() {
     int queueVisible = (int)queuePanel.height - 54;
     int tableVisible = (int)tablePanel.height - 54;
 
-    int queueMaxScroll = std::max(0, queueContentHeight - queueVisible);
-    int tableMaxScroll = std::max(0, tableContentHeight - tableVisible);
+    int queueMaxScroll = max(0, queueContentHeight - queueVisible);
+    int tableMaxScroll = max(0, tableContentHeight - tableVisible);
 
     if (queueScroll < 0) queueScroll = 0;
     if (queueScroll > queueMaxScroll) queueScroll = queueMaxScroll;
@@ -57,27 +89,124 @@ void SchedulerWindow::drawContent() {
     DrawRectangleRounded(body, 0.04f, 10, Color{ 11, 16, 24, 255 });
 
     Rectangle algorithmCard = { body.x + 10, body.y + 10, body.width - 20, 78 };
-    Rectangle queuePanel = { body.x + 10, body.y + 100, body.width * 0.46f - 15, body.height - 110 };
-    Rectangle tablePanel = { queuePanel.x + queuePanel.width + 10, body.y + 100, body.width - queuePanel.width - 30, body.height - 110 };
+    Rectangle ganttPanel = { body.x + 10, body.y + 96, body.width - 20, 132 };
+    Rectangle queuePanel = { body.x + 10, body.y + 238, body.width * 0.46f - 15, body.height - 248 };
+    Rectangle tablePanel = { queuePanel.x + queuePanel.width + 10, queuePanel.y, body.width - queuePanel.width - 30, queuePanel.height };
 
     DrawRectangleRounded(algorithmCard, 0.08f, 10, Color{ 22, 33, 47, 255 });
+    DrawRectangleRounded(ganttPanel, 0.05f, 8, Color{ 17, 27, 39, 255 });
+    DrawRectangleRounded(queuePanel, 0.04f, 8, Color{ 18, 26, 38, 255 });
+    DrawRectangleRounded(tablePanel, 0.04f, 8, Color{ 19, 29, 43, 255 });
     DrawRectangleLinesEx(algorithmCard, 1.0f, Fade(RAYWHITE, 0.16f));
+    DrawRectangleLinesEx(ganttPanel, 1.0f, Fade(RAYWHITE, 0.16f));
+    DrawRectangleLinesEx(queuePanel, 1.0f, Fade(RAYWHITE, 0.16f));
+    DrawRectangleLinesEx(tablePanel, 1.0f, Fade(RAYWHITE, 0.16f));
 
-    std::string algorithmName = processManager->getSchedulingAlgorithm() == ProcessManager::SchedulingAlgorithm::RoundRobin ? "Round Robin" : "FCFS";
+    string algorithmName = processManager->getSchedulingAlgorithm() == ProcessManager::SchedulingAlgorithm::RoundRobin ? "Round Robin" : "FCFS";
     DrawText("Scheduler Monitor", (int)algorithmCard.x + 14, (int)algorithmCard.y + 8, 20, RAYWHITE);
     DrawText(("Algorithm: " + algorithmName).c_str(), (int)algorithmCard.x + 14, (int)algorithmCard.y + 34, 18, Color{ 160, 223, 255, 255 });
     DrawText(TextFormat("Time Quantum: %d", processManager->getTimeQuantum()), (int)algorithmCard.x + 320, (int)algorithmCard.y + 34, 18, Color{ 255, 230, 160, 255 });
 
-    DrawRectangleRounded(queuePanel, 0.04f, 8, Color{ 18, 26, 38, 255 });
-    DrawRectangleRounded(tablePanel, 0.04f, 8, Color{ 19, 29, 43, 255 });
-    DrawRectangleLinesEx(queuePanel, 1.0f, Fade(RAYWHITE, 0.16f));
-    DrawRectangleLinesEx(tablePanel, 1.0f, Fade(RAYWHITE, 0.16f));
+    DrawText("Live Gantt Chart", (int)ganttPanel.x + 12, (int)ganttPanel.y + 8, 18, RAYWHITE);
+    DrawText("Latest RUNNING slices (width reflects elapsed CPU time)", (int)ganttPanel.x + 12, (int)ganttPanel.y + 30, 14, Fade(RAYWHITE, 0.68f));
+
+    auto log = processManager->getActivityLog();
+    const ProcessActivity* currentRunning = FindCurrentRunningSlice(log);
+    if (currentRunning != nullptr) {
+        string runningText = "CPU now: P" + to_string((long long)currentRunning->pid) + " (" + currentRunning->processName + ")";
+        DrawText(runningText.c_str(), (int)ganttPanel.x + 420, (int)ganttPanel.y + 10, 14, Color{ 147, 255, 198, 255 });
+    }
+    else {
+        DrawText("CPU now: idle", (int)ganttPanel.x + 420, (int)ganttPanel.y + 10, 14, Fade(RAYWHITE, 0.58f));
+    }
+
+    Rectangle timeline = { ganttPanel.x + 12, ganttPanel.y + 50, ganttPanel.width - 24, ganttPanel.height - 58 };
+    DrawRectangleRounded(timeline, 0.08f, 8, Color{ 13, 20, 30, 255 });
+    DrawRectangleLinesEx(timeline, 1.0f, Fade(RAYWHITE, 0.12f));
+
+    vector<const ProcessActivity*> runningEvents;
+    runningEvents.reserve(log.size());
+    for (const auto& entry : log) {
+        if (entry.state == RUNNING) {
+            runningEvents.push_back(&entry);
+        }
+    }
+
+    if (runningEvents.empty()) {
+        DrawText("No RUNNING events yet. Open apps or trigger booking actions to populate the chart.",
+            (int)timeline.x + 10, (int)timeline.y + 16, 13, Fade(RAYWHITE, 0.56f));
+    }
+    else {
+        int maxBars = max(1, (int)(timeline.width / 110.0f));
+        int start = max(0, (int)runningEvents.size() - maxBars);
+        int barCount = (int)runningEvents.size() - start;
+        float gap = barCount > 1 ? 6.0f : 0.0f;
+        time_t now = time(nullptr);
+        float usableWidth = timeline.width - gap * (barCount - 1);
+        float totalWeight = 0.0f;
+        for (int i = start; i < (int)runningEvents.size(); ++i) {
+            totalWeight += ActivityWeight(*runningEvents[i], now);
+        }
+        if (totalWeight <= 0.0f) {
+            totalWeight = (float)barCount;
+        }
+        float barY = timeline.y + 7;
+        float barH = timeline.height - 14;
+        float cursorX = timeline.x;
+
+        for (int i = 0; i < barCount; ++i) {
+            const ProcessActivity* event = runningEvents[start + i];
+            float weight = ActivityWeight(*event, now);
+            float barWidth = usableWidth * (weight / totalWeight);
+            if (barWidth < 24.0f) {
+                barWidth = 24.0f;
+            }
+            float barX = cursorX;
+            Color barColor = ColorForPid(event->pid);
+
+            DrawRectangleRounded({ barX, barY, barWidth, barH }, 0.20f, 6, Fade(barColor, 0.93f));
+            DrawRectangleLinesEx({ barX, barY, barWidth, barH }, 1.0f, Fade(RAYWHITE, 0.20f));
+
+            string pidLabel = "P" + to_string((long long)event->pid);
+            int pidFont = barWidth > 72 ? 14 : 11;
+            int pidTextWidth = MeasureText(pidLabel.c_str(), pidFont);
+            DrawText(pidLabel.c_str(), (int)(barX + (barWidth - pidTextWidth) * 0.5f), (int)barY + 5, pidFont, RAYWHITE);
+
+            if (barWidth > 94) {
+                int nameFont = 11;
+                string name = event->processName;
+                if (MeasureText(name.c_str(), nameFont) > (int)barWidth - 10) {
+                    while (name.size() > 3 && MeasureText((name + "...").c_str(), nameFont) > (int)barWidth - 10) {
+                        name.pop_back();
+                    }
+                    name += "...";
+                }
+                DrawText(name.c_str(), (int)barX + 6, (int)barY + 22, nameFont, Fade(RAYWHITE, 0.86f));
+            }
+
+            if (barWidth > 78) {
+                DrawText(event->timestamp.c_str(), (int)barX + 6, (int)(barY + barH - 16), 10, Fade(RAYWHITE, 0.72f));
+            }
+
+            if (barWidth > 110) {
+                int durationSeconds = (int)max(1.0, difftime(event->endTime != 0 ? event->endTime : now, event->startTime));
+                DrawText(TextFormat("%ds", durationSeconds), (int)barX + (int)barWidth - 34, (int)barY + 5, 10, Fade(RAYWHITE, 0.72f));
+            }
+
+            if (i < barCount - 1) {
+                float lineY = barY + barH * 0.5f;
+                DrawLineEx({ barX + barWidth, lineY }, { barX + barWidth + gap, lineY }, 1.6f, Fade(RAYWHITE, 0.55f));
+            }
+
+            cursorX += barWidth + gap;
+        }
+    }
 
     DrawText("Ready Queue", (int)queuePanel.x + 12, (int)queuePanel.y + 8, 18, RAYWHITE);
     DrawText("Process Table", (int)tablePanel.x + 12, (int)tablePanel.y + 8, 18, RAYWHITE);
 
-    auto ready = processManager->getReadyQueueSnapshot();
     auto table = processManager->getProcessTable();
+    auto ready = processManager->getReadyQueueSnapshot();
 
     DrawText("Order", (int)queuePanel.x + 14, (int)queuePanel.y + 38, 16, Fade(RAYWHITE, 0.72f));
     DrawText("PID", (int)queuePanel.x + 90, (int)queuePanel.y + 38, 16, Fade(RAYWHITE, 0.72f));
@@ -122,15 +251,15 @@ void SchedulerWindow::drawContent() {
 
     if (ready.size() * 24 > queueVisible) {
         DrawRectangle((int)queuePanel.x + (int)queuePanel.width - 10, (int)queuePanel.y + 36, 2, queueVisible, Fade(RAYWHITE, 0.10f));
-        float thumbH = std::max(24.0f, ((float)queueVisible / std::max(1, (int)ready.size() * 24)) * queueVisible);
-        float thumbY = queuePanel.y + 36 + ((float)queueScroll / std::max(1, (int)ready.size() * 24 - queueVisible)) * (queueVisible - thumbH);
+        float thumbH = max(24.0f, ((float)queueVisible / max(1, (int)ready.size() * 24)) * queueVisible);
+        float thumbY = queuePanel.y + 36 + ((float)queueScroll / max(1, (int)ready.size() * 24 - queueVisible)) * (queueVisible - thumbH);
         DrawRectangleRounded({ queuePanel.x + queuePanel.width - 12, thumbY, 6, thumbH }, 0.4f, 8, Color{ 108, 194, 232, 255 });
     }
 
     if (table.size() * 24 > tableVisible) {
         DrawRectangle((int)tablePanel.x + (int)tablePanel.width - 10, (int)tablePanel.y + 36, 2, tableVisible, Fade(RAYWHITE, 0.10f));
-        float thumbH = std::max(24.0f, ((float)tableVisible / std::max(1, (int)table.size() * 24)) * tableVisible);
-        float thumbY = tablePanel.y + 36 + ((float)tableScroll / std::max(1, (int)table.size() * 24 - tableVisible)) * (tableVisible - thumbH);
+        float thumbH = max(24.0f, ((float)tableVisible / max(1, (int)table.size() * 24)) * tableVisible);
+        float thumbY = tablePanel.y + 36 + ((float)tableScroll / max(1, (int)table.size() * 24 - tableVisible)) * (tableVisible - thumbH);
         DrawRectangleRounded({ tablePanel.x + tablePanel.width - 12, thumbY, 6, thumbH }, 0.4f, 8, Color{ 108, 194, 232, 255 });
     }
 }

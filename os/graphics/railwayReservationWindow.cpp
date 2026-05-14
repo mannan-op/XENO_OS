@@ -1,0 +1,470 @@
+#include "railwayReservationWindow.h"
+#include <algorithm>
+#include <cctype>
+#include <fstream>
+#include <mutex>
+#include <sstream>
+using namespace std;
+
+namespace {
+    mutex gSeatDatabaseMutex;
+
+    bool ContainsInsensitive(const string& value, const string& needle) {
+        if (needle.empty()) {
+            return true;
+        }
+
+        string lhs = value;
+        string rhs = needle;
+        transform(lhs.begin(), lhs.end(), lhs.begin(), [](unsigned char c) { return (char)tolower(c); });
+        transform(rhs.begin(), rhs.end(), rhs.begin(), [](unsigned char c) { return (char)tolower(c); });
+        return lhs.find(rhs) != string::npos;
+    }
+
+    void DrawFieldBox(Rectangle rect, const string& label, const string& value, bool active) {
+        DrawText(label.c_str(), (int)rect.x, (int)rect.y - 16, 13, Fade(RAYWHITE, 0.62f));
+        DrawRectangleRounded(rect, 0.22f, 8, active ? Color{ 22, 47, 78, 255 } : Color{ 24, 33, 46, 255 });
+        DrawRectangleLinesEx(rect, 1.0f, active ? Fade(SKYBLUE, 0.85f) : Fade(RAYWHITE, 0.15f));
+        DrawText(value.empty() ? "Type here..." : value.c_str(), (int)rect.x + 10, (int)rect.y + 7, 14, value.empty() ? Fade(RAYWHITE, 0.42f) : RAYWHITE);
+    }
+
+    void DrawActionButton(Rectangle rect, const char* text, Color fill, Color textColor) {
+        DrawRectangleRounded(rect, 0.28f, 8, fill);
+        DrawRectangleLinesEx(rect, 1.0f, Fade(RAYWHITE, 0.18f));
+        int fontSize = 15;
+        int textWidth = MeasureText(text, fontSize);
+        DrawText(text, (int)(rect.x + rect.width / 2.0f - textWidth / 2.0f), (int)rect.y + 7, fontSize, textColor);
+    }
+}
+
+RailwayReservationWindow::RailwayReservationWindow(ProcessManager* pm, process_id_t processId)
+    : Window(170, 70, 980, 600, "Railway Reservation") {
+    processManager = pm;
+    pid = processId;
+    bookingFilePath = processManager->getBookingFilePath();
+    activeField = Field::Passenger;
+    listScroll = 0;
+    nextTicketId = 1;
+    loadTickets();
+    statusMessage = "Book, cancel, and view tickets in booking.txt";
+}
+
+process_id_t RailwayReservationWindow::startRequestProcess(const string& requestName, int memoryUsage) {
+    Process* request = processManager->createProcess(requestName, memoryUsage);
+    if (request == nullptr) {
+        appendStatus("Request rejected: system resources unavailable");
+        return 0;
+    }
+
+    processManager->setProcessState(request->pid, RUNNING, requestName + " started");
+    return request->pid;
+}
+
+void RailwayReservationWindow::finishRequestProcess(process_id_t requestPid) {
+    if (requestPid != 0) {
+        processManager->terminateProcess(requestPid);
+    }
+}
+
+vector<string> RailwayReservationWindow::split(const string& text, char delimiter) {
+    vector<string> parts;
+    stringstream stream(text);
+    string part;
+
+    while (getline(stream, part, delimiter)) {
+        parts.push_back(part);
+    }
+
+    return parts;
+}
+
+string RailwayReservationWindow::trim(const string& text) {
+    size_t start = text.find_first_not_of(" \t\r\n");
+    size_t end = text.find_last_not_of(" \t\r\n");
+
+    if (start == string::npos) {
+        return "";
+    }
+
+    return text.substr(start, end - start + 1);
+}
+
+bool RailwayReservationWindow::isDigits(const string& text) {
+    if (text.empty()) {
+        return false;
+    }
+
+    return all_of(text.begin(), text.end(), [](unsigned char c) {
+        return isdigit(c) != 0;
+    });
+}
+
+void RailwayReservationWindow::loadTickets() {
+    tickets.clear();
+    nextTicketId = 1;
+
+    ifstream file(bookingFilePath);
+    if (!file.is_open()) {
+        statusMessage = "Unable to open booking.txt";
+        return;
+    }
+
+    string line;
+    while (getline(file, line)) {
+        line = trim(line);
+        if (line.empty()) {
+            continue;
+        }
+
+        auto parts = split(line, '|');
+        if (parts.size() < 7) {
+            continue;
+        }
+
+        TicketRecord record{};
+        record.id = stoi(trim(parts[0]));
+        record.status = trim(parts[1]);
+        record.passenger = trim(parts[2]);
+        record.train = trim(parts[3]);
+        record.source = trim(parts[4]);
+        record.destination = trim(parts[5]);
+        record.travelDate = trim(parts[6]);
+
+        nextTicketId = max(nextTicketId, record.id + 1);
+        tickets.push_back(record);
+    }
+}
+
+void RailwayReservationWindow::saveTickets() const {
+    ofstream file(bookingFilePath, ios::trunc);
+    if (!file.is_open()) {
+        return;
+    }
+
+    for (const auto& ticket : tickets) {
+        file << ticket.id << '|'
+            << ticket.status << '|'
+            << ticket.passenger << '|'
+            << ticket.train << '|'
+            << ticket.source << '|'
+            << ticket.destination << '|'
+            << ticket.travelDate << '\n';
+    }
+}
+
+void RailwayReservationWindow::appendStatus(const string& message) {
+    statusMessage = message;
+}
+
+void RailwayReservationWindow::handleTextInput(string& value, int maxLength) {
+    int key = GetCharPressed();
+    while (key > 0) {
+        if (key >= 32 && key <= 125 && (int)value.size() < maxLength) {
+            value += (char)key;
+        }
+        key = GetCharPressed();
+    }
+
+    if (IsKeyPressed(KEY_BACKSPACE) && !value.empty()) {
+        value.pop_back();
+    }
+}
+
+RailwayReservationWindow::TicketRecord* RailwayReservationWindow::findTicketById(int ticketId) {
+    for (auto& ticket : tickets) {
+        if (ticket.id == ticketId) {
+            return &ticket;
+        }
+    }
+    return nullptr;
+}
+
+const RailwayReservationWindow::TicketRecord* RailwayReservationWindow::findTicketById(int ticketId) const {
+    for (const auto& ticket : tickets) {
+        if (ticket.id == ticketId) {
+            return &ticket;
+        }
+    }
+    return nullptr;
+}
+
+void RailwayReservationWindow::bookTicket() {
+    process_id_t requestPid = startRequestProcess("Booking Request", 1);
+    if (requestPid == 0) {
+        return;
+    }
+
+    struct RequestCleanup {
+        RailwayReservationWindow* window;
+        process_id_t pid;
+        ~RequestCleanup() { window->finishRequestProcess(pid); }
+    } cleanup{ this, requestPid };
+
+    string passenger = trim(passengerInput);
+    string train = trim(trainInput);
+    string source = trim(sourceInput);
+    string destination = trim(destinationInput);
+    string travelDate = trim(dateInput);
+
+    if (passenger.empty() || train.empty() || source.empty() || destination.empty() || travelDate.empty()) {
+        appendStatus("Fill all booking fields before booking");
+        return;
+    }
+
+    unique_lock<mutex> lock(gSeatDatabaseMutex, defer_lock);
+    if (!lock.try_lock()) {
+        processManager->setProcessState(requestPid, BLOCKED, "Waiting for seat database lock");
+        lock.lock();
+    }
+
+    processManager->setProcessState(requestPid, RUNNING, "Booking request running in critical section");
+    loadTickets();
+
+    TicketRecord record;
+    record.id = nextTicketId++;
+    record.passenger = passenger;
+    record.train = train;
+    record.source = source;
+    record.destination = destination;
+    record.travelDate = travelDate;
+    record.status = "BOOKED";
+
+    tickets.push_back(record);
+    saveTickets();
+
+    passengerInput.clear();
+    trainInput.clear();
+    sourceInput.clear();
+    destinationInput.clear();
+    dateInput.clear();
+    appendStatus("Ticket booked successfully: #" + to_string(record.id));
+}
+
+void RailwayReservationWindow::cancelTicket() {
+    process_id_t requestPid = startRequestProcess("Cancellation Request", 1);
+    if (requestPid == 0) {
+        return;
+    }
+
+    struct RequestCleanup {
+        RailwayReservationWindow* window;
+        process_id_t pid;
+        ~RequestCleanup() { window->finishRequestProcess(pid); }
+    } cleanup{ this, requestPid };
+
+    string ticketIdText = trim(cancelInput);
+    if (!isDigits(ticketIdText)) {
+        appendStatus("Enter a valid ticket ID to cancel");
+        return;
+    }
+
+    unique_lock<mutex> lock(gSeatDatabaseMutex, defer_lock);
+    if (!lock.try_lock()) {
+        processManager->setProcessState(requestPid, BLOCKED, "Waiting for seat database lock");
+        lock.lock();
+    }
+
+    processManager->setProcessState(requestPid, RUNNING, "Cancellation request running in critical section");
+    loadTickets();
+
+    int ticketId = stoi(ticketIdText);
+    TicketRecord* record = findTicketById(ticketId);
+    if (record == nullptr) {
+        appendStatus("Ticket ID not found");
+        return;
+    }
+
+    if (record->status == "CANCELLED") {
+        appendStatus("Ticket already cancelled");
+        return;
+    }
+
+    record->status = "CANCELLED";
+    saveTickets();
+    cancelInput.clear();
+    appendStatus("Ticket cancelled: #" + to_string(ticketId));
+}
+
+void RailwayReservationWindow::update() {
+    Window::update();
+
+    if (!isActive()) {
+        return;
+    }
+
+    {
+        lock_guard<mutex> lock(gSeatDatabaseMutex);
+        loadTickets();
+    }
+
+    Vector2 mouse = GetMousePosition();
+    Rectangle body = { bounds.x + 10, bounds.y + 40, bounds.width - 20, bounds.height - 50 };
+    Rectangle formPanel = { body.x + 10, body.y + 10, body.width - 20, 208 };
+    Rectangle listPanel = { body.x + 10, body.y + 228, body.width - 20, body.height - 238 };
+
+    Rectangle passengerBox = { formPanel.x + 14, formPanel.y + 36, 176, 32 };
+    Rectangle trainBox = { formPanel.x + 206, formPanel.y + 36, 176, 32 };
+    Rectangle sourceBox = { formPanel.x + 398, formPanel.y + 36, 150, 32 };
+    Rectangle destinationBox = { formPanel.x + 564, formPanel.y + 36, 150, 32 };
+    Rectangle dateBox = { formPanel.x + 730, formPanel.y + 36, 142, 32 };
+    Rectangle cancelBox = { formPanel.x + 14, formPanel.y + 110, 140, 32 };
+    Rectangle bookBtn = { formPanel.x + 172, formPanel.y + 106, 130, 36 };
+    Rectangle cancelBtn = { formPanel.x + 322, formPanel.y + 106, 140, 36 };
+    Rectangle refreshBtn = { formPanel.x + 480, formPanel.y + 106, 130, 36 };
+
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+        activeField = Field::None;
+
+        if (CheckCollisionPointRec(mouse, passengerBox)) activeField = Field::Passenger;
+        else if (CheckCollisionPointRec(mouse, trainBox)) activeField = Field::Train;
+        else if (CheckCollisionPointRec(mouse, sourceBox)) activeField = Field::Source;
+        else if (CheckCollisionPointRec(mouse, destinationBox)) activeField = Field::Destination;
+        else if (CheckCollisionPointRec(mouse, dateBox)) activeField = Field::TravelDate;
+        else if (CheckCollisionPointRec(mouse, cancelBox)) activeField = Field::CancelId;
+        else if (CheckCollisionPointRec(mouse, bookBtn)) bookTicket();
+        else if (CheckCollisionPointRec(mouse, cancelBtn)) cancelTicket();
+        else if (CheckCollisionPointRec(mouse, refreshBtn)) {
+            process_id_t requestPid = startRequestProcess("Inquiry Request", 1);
+            if (requestPid == 0) {
+                // Resource admission failed; leave UI responsive
+            } else {
+                struct RequestCleanup {
+                    RailwayReservationWindow* window;
+                    process_id_t pid;
+                    ~RequestCleanup() { window->finishRequestProcess(pid); }
+                } cleanup{ this, requestPid };
+
+                unique_lock<mutex> lock(gSeatDatabaseMutex, defer_lock);
+                if (!lock.try_lock()) {
+                    processManager->setProcessState(requestPid, BLOCKED, "Waiting for seat database lock");
+                    lock.lock();
+                }
+
+                processManager->setProcessState(requestPid, RUNNING, "Inquiry running in critical section");
+                loadTickets();
+                appendStatus("Ticket list refreshed");
+            }
+        }
+        else if (CheckCollisionPointRec(mouse, listPanel)) {
+            setFocused(true);
+        }
+    }
+
+    if (isFocused()) {
+        if (activeField == Field::Passenger) handleTextInput(passengerInput, 28);
+        else if (activeField == Field::Train) handleTextInput(trainInput, 28);
+        else if (activeField == Field::Source) handleTextInput(sourceInput, 24);
+        else if (activeField == Field::Destination) handleTextInput(destinationInput, 24);
+        else if (activeField == Field::TravelDate) handleTextInput(dateInput, 16);
+        else if (activeField == Field::CancelId) handleTextInput(cancelInput, 8);
+
+        if (IsKeyPressed(KEY_TAB)) {
+            if (activeField == Field::Passenger) activeField = Field::Train;
+            else if (activeField == Field::Train) activeField = Field::Source;
+            else if (activeField == Field::Source) activeField = Field::Destination;
+            else if (activeField == Field::Destination) activeField = Field::TravelDate;
+            else if (activeField == Field::TravelDate) activeField = Field::CancelId;
+            else activeField = Field::Passenger;
+        }
+
+        if (IsKeyPressed(KEY_ENTER)) {
+            if (activeField == Field::CancelId) {
+                cancelTicket();
+            }
+            else if (activeField == Field::Passenger || activeField == Field::Train || activeField == Field::Source || activeField == Field::Destination || activeField == Field::TravelDate) {
+                bookTicket();
+            }
+        }
+
+        float wheel = GetMouseWheelMove();
+        if (wheel != 0.0f && CheckCollisionPointRec(mouse, listPanel)) {
+            listScroll -= (int)wheel * 24;
+        }
+    }
+
+    int contentHeight = (int)tickets.size() * 24;
+    int visibleHeight = (int)listPanel.height - 64;
+    int maxScroll = max(0, contentHeight - visibleHeight);
+    if (listScroll < 0) listScroll = 0;
+    if (listScroll > maxScroll) listScroll = maxScroll;
+}
+
+void RailwayReservationWindow::drawContent() {
+    Rectangle body = { bounds.x + 10, bounds.y + 40, bounds.width - 20, bounds.height - 50 };
+    DrawRectangleRounded(body, 0.04f, 10, Color{ 12, 17, 24, 255 });
+
+    Rectangle formPanel = { body.x + 10, body.y + 10, body.width - 20, 208 };
+    Rectangle listPanel = { body.x + 10, body.y + 228, body.width - 20, body.height - 238 };
+
+    DrawRectangleRounded(formPanel, 0.06f, 10, Color{ 20, 30, 44, 255 });
+    DrawRectangleRounded(listPanel, 0.04f, 10, Color{ 17, 24, 35, 255 });
+    DrawRectangleLinesEx(formPanel, 1.0f, Fade(RAYWHITE, 0.14f));
+    DrawRectangleLinesEx(listPanel, 1.0f, Fade(RAYWHITE, 0.14f));
+
+    DrawText("Railway Reservation", (int)formPanel.x + 14, (int)formPanel.y + 8, 20, RAYWHITE);
+    DrawText("Book, cancel, and show tickets", (int)formPanel.x + 230, (int)formPanel.y + 10, 16, Fade(RAYWHITE, 0.70f));
+    DrawText(statusMessage.c_str(), (int)formPanel.x + 14, (int)formPanel.y + 178, 15, Color{ 160, 223, 255, 255 });
+
+    Rectangle passengerBox = { formPanel.x + 14, formPanel.y + 36, 176, 32 };
+    Rectangle trainBox = { formPanel.x + 206, formPanel.y + 36, 176, 32 };
+    Rectangle sourceBox = { formPanel.x + 398, formPanel.y + 36, 150, 32 };
+    Rectangle destinationBox = { formPanel.x + 564, formPanel.y + 36, 150, 32 };
+    Rectangle dateBox = { formPanel.x + 730, formPanel.y + 36, 142, 32 };
+    Rectangle cancelBox = { formPanel.x + 14, formPanel.y + 110, 140, 32 };
+    Rectangle bookBtn = { formPanel.x + 172, formPanel.y + 106, 130, 36 };
+    Rectangle cancelBtn = { formPanel.x + 322, formPanel.y + 106, 140, 36 };
+    Rectangle refreshBtn = { formPanel.x + 480, formPanel.y + 106, 130, 36 };
+
+    DrawFieldBox(passengerBox, "Passenger", passengerInput, activeField == Field::Passenger);
+    DrawFieldBox(trainBox, "Train", trainInput, activeField == Field::Train);
+    DrawFieldBox(sourceBox, "From", sourceInput, activeField == Field::Source);
+    DrawFieldBox(destinationBox, "To", destinationInput, activeField == Field::Destination);
+    DrawFieldBox(dateBox, "Date", dateInput, activeField == Field::TravelDate);
+    DrawFieldBox(cancelBox, "Cancel Ticket ID", cancelInput, activeField == Field::CancelId);
+
+    DrawActionButton(bookBtn, "BOOK", Color{ 40, 110, 76, 255 }, RAYWHITE);
+    DrawActionButton(cancelBtn, "CANCEL", Color{ 138, 56, 62, 255 }, RAYWHITE);
+    DrawActionButton(refreshBtn, "SHOW TICKETS", Color{ 42, 72, 106, 255 }, RAYWHITE);
+
+    DrawText("Tickets", (int)listPanel.x + 14, (int)listPanel.y + 8, 20, RAYWHITE);
+    DrawText("ID", (int)listPanel.x + 14, (int)listPanel.y + 38, 16, Fade(RAYWHITE, 0.70f));
+    DrawText("Passenger", (int)listPanel.x + 72, (int)listPanel.y + 38, 16, Fade(RAYWHITE, 0.70f));
+    DrawText("Train", (int)listPanel.x + 250, (int)listPanel.y + 38, 16, Fade(RAYWHITE, 0.70f));
+    DrawText("Route", (int)listPanel.x + 420, (int)listPanel.y + 38, 16, Fade(RAYWHITE, 0.70f));
+    DrawText("Date", (int)listPanel.x + 640, (int)listPanel.y + 38, 16, Fade(RAYWHITE, 0.70f));
+    DrawText("Status", (int)listPanel.x + 810, (int)listPanel.y + 38, 16, Fade(RAYWHITE, 0.70f));
+
+    int rowHeight = 24;
+    int visibleHeight = (int)listPanel.height - 64;
+    int contentHeight = (int)tickets.size() * rowHeight;
+    int maxScroll = max(0, contentHeight - visibleHeight);
+
+    BeginScissorMode((int)listPanel.x + 2, (int)listPanel.y + 34, (int)listPanel.width - 4, (int)listPanel.height - 42);
+    int y = (int)listPanel.y + 58 - listScroll;
+    for (const auto& ticket : tickets) {
+        DrawText(TextFormat("%d", ticket.id), (int)listPanel.x + 14, y, 16, Color{ 153, 224, 255, 255 });
+        DrawText(ticket.passenger.c_str(), (int)listPanel.x + 72, y, 16, RAYWHITE);
+        DrawText(ticket.train.c_str(), (int)listPanel.x + 250, y, 16, RAYWHITE);
+        DrawText((ticket.source + " -> " + ticket.destination).c_str(), (int)listPanel.x + 420, y, 16, Color{ 190, 255, 200, 255 });
+        DrawText(ticket.travelDate.c_str(), (int)listPanel.x + 640, y, 16, RAYWHITE);
+        Color statusColor = ticket.status == "BOOKED" ? Color{ 124, 252, 175, 255 } : Color{ 255, 170, 170, 255 };
+        DrawText(ticket.status.c_str(), (int)listPanel.x + 810, y, 16, statusColor);
+        y += rowHeight;
+    }
+    EndScissorMode();
+
+    if (tickets.empty()) {
+        DrawText("No tickets found. Use BOOK to create the first reservation.", (int)listPanel.x + 14, (int)listPanel.y + 76, 15, Fade(RAYWHITE, 0.58f));
+    }
+
+    if (maxScroll > 0) {
+        DrawRectangle((int)listPanel.x + (int)listPanel.width - 10, (int)listPanel.y + 36, 2, visibleHeight, Fade(RAYWHITE, 0.10f));
+        float thumbH = max(24.0f, ((float)visibleHeight / max(1, contentHeight)) * visibleHeight);
+        float thumbY = listPanel.y + 36 + ((float)listScroll / max(1, maxScroll)) * (visibleHeight - thumbH);
+        DrawRectangleRounded({ listPanel.x + listPanel.width - 12, thumbY, 6, thumbH }, 0.4f, 8, Color{ 108, 194, 232, 255 });
+    }
+}
+
+process_id_t RailwayReservationWindow::getPid() const {
+    return pid;
+}

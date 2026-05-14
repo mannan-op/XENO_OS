@@ -1,0 +1,64 @@
+#include "systemModeScreen.h"
+#include <algorithm>
+using namespace std;
+
+SystemModeScreen::SystemModeScreen() {
+    messages = {
+        "Switching to kernel mode...",
+        "Elevating OS privilege level...",
+        "Acquiring CPU, memory, and I/O control...",
+        "Kernel ready. OS now controls system resources."
+    };
+
+    timer = 0.0f;
+    visibleMessages = 0;
+}
+
+void SystemModeScreen::update(float dt) {
+    timer += dt;
+
+    if (visibleMessages < (int)messages.size()) {
+        if (timer > visibleMessages * 0.85f) {
+            visibleMessages++;
+        }
+    }
+}
+
+void SystemModeScreen::draw() {
+    int screenW = GetScreenWidth();
+    int screenH = GetScreenHeight();
+
+    DrawRectangleGradientV(0, 0, screenW, screenH, Color{ 7, 14, 24, 255 }, Color{ 18, 44, 70, 255 });
+    DrawCircle(screenW - 130, 110, 180, Fade(SKYBLUE, 0.12f));
+    DrawCircle(130, screenH - 90, 220, Fade(BLUE, 0.14f));
+
+    DrawText("SYSTEM MODE", 58, 54, 40, RAYWHITE);
+    DrawText("Kernel handoff in progress", 60, 98, 20, Fade(RAYWHITE, 0.72f));
+
+    Rectangle card = { (float)screenW / 2.0f - 360, (float)screenH / 2.0f - 160, 720, 300 };
+    DrawRectangleRounded(card, 0.08f, 18, Fade(BLACK, 0.42f));
+    DrawRectangleLinesEx(card, 1.6f, Fade(RAYWHITE, 0.18f));
+
+    Rectangle chip = { card.x + 34, card.y + 34, 110, 110 };
+    DrawRectangleRounded(chip, 0.22f, 14, Color{ 32, 64, 104, 255 });
+    DrawRectangleRounded({ chip.x + 20, chip.y + 20, 70, 70 }, 0.28f, 12, Color{ 11, 18, 30, 255 });
+    DrawText("K", (int)chip.x + 38, (int)chip.y + 30, 42, Color{ 120, 214, 255, 255 });
+
+    DrawText("Kernel Ready", (int)card.x + 170, (int)card.y + 42, 30, RAYWHITE);
+    DrawText("OS takes control of system resources", (int)card.x + 170, (int)card.y + 78, 20, Fade(RAYWHITE, 0.74f));
+
+    Rectangle progressBack = { card.x + 170, card.y + 132, 500, 14 };
+    Rectangle progressFill = { progressBack.x, progressBack.y, progressBack.width * min(timer / 3.0f, 1.0f), progressBack.height };
+    DrawRectangleRounded(progressBack, 0.45f, 14, Fade(RAYWHITE, 0.14f));
+    DrawRectangleRounded(progressFill, 0.45f, 14, Color{ 76, 191, 255, 255 });
+
+    int y = (int)card.y + 176;
+    for (int i = 0; i < visibleMessages; i++) {
+        DrawText(messages[i].c_str(), (int)card.x + 34, y, 21, Color{ 205, 240, 255, 255 });
+        y += 28;
+    }
+}
+
+bool SystemModeScreen::isFinished() const {
+    return timer > 3.0f;
+}

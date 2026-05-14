@@ -1,5 +1,4 @@
 #include "lockScreen.h"
-using namespace std;
 
 void LockScreen::ensureBackground() {
     if (backgroundReady) {
@@ -122,7 +121,7 @@ void LockScreen::draw() {
     DrawRectangleRounded(inputBar, 0.28f, 14, Fade(Color{ 22, 43, 71, 255 }, 0.82f));
     DrawRectangleLinesEx(inputBar, 1.6f, Fade(Color{ 122, 198, 255, 255 }, 0.85f));
 
-    string shown = hidden.empty() ? "Password" : hidden;
+    std::string shown = hidden.empty() ? "Password" : hidden;
     Color shownColor = hidden.empty() ? Fade(RAYWHITE, 0.50f) : RAYWHITE;
     DrawText(shown.c_str(), (int)inputBar.x + 16, (int)inputBar.y + 15, 22, shownColor);
 

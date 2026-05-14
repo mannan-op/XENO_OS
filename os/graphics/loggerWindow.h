@@ -1,7 +1,8 @@
 #pragma once
-
 #include "windows.h"
 #include "../system/processManager.h"
+
+using namespace std;
 
 class LoggerWindow : public Window {
 public:
@@ -15,7 +16,7 @@ private:
     ProcessManager* processManager;
     process_id_t pid;
     FilterMode filterMode;
-    std::string searchQuery;
+    string searchQuery;
     bool searchFocused;
     int processScroll;
     int activityScroll;
