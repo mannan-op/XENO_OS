@@ -1,4 +1,5 @@
 #include "lockScreen.h"
+
 using namespace std;
 
 void LockScreen::ensureBackground() {

@@ -11785,3 +11785,10 @@ Window moved to foreground | PID 187660 (Logger)
 Terminated process PID 187659 (Logger)
 11:53:22 | PID 187660 | Logger | TERMINATED | Process terminated
 Terminated process PID 187660 (Logger)
+Process Manager initialized
+Process Manager state cleared
+Scheduler set to FCFS
+Time quantum set to 1
+CPU core budget set to 10
+Memory manager attached
+Process Manager shutting down
