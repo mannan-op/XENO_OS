@@ -2,21 +2,20 @@
 #include <algorithm>
 #include <cctype>
 #include <vector>
-using namespace std;
 
 namespace {
-    string ToLower(string value) {
-        transform(value.begin(), value.end(), value.begin(), [](unsigned char c) {
-            return (char)tolower(c);
+    std::string ToLower(std::string value) {
+        std::transform(value.begin(), value.end(), value.begin(), [](unsigned char c) {
+            return (char)std::tolower(c);
         });
         return value;
     }
 
-    bool ContainsInsensitive(const string& value, const string& needle) {
+    bool ContainsInsensitive(const std::string& value, const std::string& needle) {
         if (needle.empty()) {
             return true;
         }
-        return ToLower(value).find(ToLower(needle)) != string::npos;
+        return ToLower(value).find(ToLower(needle)) != std::string::npos;
     }
 
     bool MatchesFilter(ProcessState state, LoggerWindow::FilterMode mode) {
@@ -120,13 +119,13 @@ void LoggerWindow::update() {
     }
 
     auto processTable = processManager->getProcessTable();
-    vector<const Process*> filteredProcesses;
+    std::vector<const Process*> filteredProcesses;
     for (const auto* p : processTable) {
         if (!MatchesFilter(p->state, filterMode)) {
             continue;
         }
 
-        if (!ContainsInsensitive(to_string((long long)p->pid), searchQuery) &&
+        if (!ContainsInsensitive(std::to_string((long long)p->pid), searchQuery) &&
             !ContainsInsensitive(p->name, searchQuery)) {
             continue;
         }
@@ -135,13 +134,13 @@ void LoggerWindow::update() {
     }
 
     auto log = processManager->getActivityLog();
-    vector<const ProcessActivity*> filteredLog;
+    std::vector<const ProcessActivity*> filteredLog;
     for (const auto& entry : log) {
         if (!MatchesFilter(entry.state, filterMode)) {
             continue;
         }
 
-        if (!ContainsInsensitive(to_string((long long)entry.pid), searchQuery) &&
+        if (!ContainsInsensitive(std::to_string((long long)entry.pid), searchQuery) &&
             !ContainsInsensitive(entry.processName, searchQuery)) {
             continue;
         }
@@ -152,14 +151,14 @@ void LoggerWindow::update() {
     int processRowHeight = 24;
     int processVisibleHeight = (int)processPanel.height - 84;
     int processContentHeight = (int)filteredProcesses.size() * processRowHeight;
-    int processMaxScroll = max(0, processContentHeight - processVisibleHeight);
+    int processMaxScroll = std::max(0, processContentHeight - processVisibleHeight);
     if (processScroll < 0) processScroll = 0;
     if (processScroll > processMaxScroll) processScroll = processMaxScroll;
 
     int logRowHeight = 22;
     int logVisibleHeight = (int)activityPanel.height - 46;
     int logContentHeight = (int)filteredLog.size() * logRowHeight;
-    int logMaxScroll = max(0, logContentHeight - logVisibleHeight);
+    int logMaxScroll = std::max(0, logContentHeight - logVisibleHeight);
     if (activityScroll < 0) activityScroll = 0;
     if (activityScroll > logMaxScroll) activityScroll = logMaxScroll;
 }
@@ -210,7 +209,7 @@ void LoggerWindow::drawContent() {
     DrawText("Search", (int)searchBox.x, (int)searchBox.y - 16, 13, Fade(RAYWHITE, 0.60f));
     DrawRectangleRounded(searchBox, 0.30f, 8, searchFocused ? Color{ 20, 41, 66, 255 } : Color{ 26, 34, 45, 255 });
     DrawRectangleLinesEx(searchBox, 1.0f, searchFocused ? Fade(SKYBLUE, 0.8f) : Fade(RAYWHITE, 0.18f));
-    string searchShown = searchQuery.empty() ? "Type PID or name..." : searchQuery;
+    std::string searchShown = searchQuery.empty() ? "Type PID or name..." : searchQuery;
     if (searchFocused && ((int)(GetTime() * 2.0f) % 2 == 0)) {
         searchShown += "_";
     }
@@ -230,12 +229,12 @@ void LoggerWindow::drawContent() {
     DrawText("Memory", (int)processPanel.x + 520, (int)processPanel.y + 38, 16, Fade(RAYWHITE, 0.72f));
 
     auto processTableVisible = processManager->getProcessTable();
-    vector<const Process*> filteredProcesses;
+    std::vector<const Process*> filteredProcesses;
     for (const auto* p : processTableVisible) {
         if (!MatchesFilter(p->state, filterMode)) {
             continue;
         }
-        if (!ContainsInsensitive(to_string((long long)p->pid), searchQuery) &&
+        if (!ContainsInsensitive(std::to_string((long long)p->pid), searchQuery) &&
             !ContainsInsensitive(p->name, searchQuery)) {
             continue;
         }
@@ -245,7 +244,7 @@ void LoggerWindow::drawContent() {
     int processRowHeight = 24;
     int processVisibleHeight = (int)processPanel.height - 84;
     int processContentHeight = (int)filteredProcesses.size() * processRowHeight;
-    int processMaxScroll = max(0, processContentHeight - processVisibleHeight);
+    int processMaxScroll = std::max(0, processContentHeight - processVisibleHeight);
     if (processScroll < 0) processScroll = 0;
     if (processScroll > processMaxScroll) processScroll = processMaxScroll;
 
@@ -266,18 +265,18 @@ void LoggerWindow::drawContent() {
 
     if (processMaxScroll > 0) {
         DrawRectangle((int)processPanel.x + (int)processPanel.width - 10, (int)processPanel.y + 36, 2, processVisibleHeight, Fade(RAYWHITE, 0.10f));
-        float thumbH = max(24.0f, ((float)processVisibleHeight / max(1, processContentHeight)) * processVisibleHeight);
-        float thumbY = processPanel.y + 36 + ((float)processScroll / max(1, processMaxScroll)) * (processVisibleHeight - thumbH);
+        float thumbH = std::max(24.0f, ((float)processVisibleHeight / std::max(1, processContentHeight)) * processVisibleHeight);
+        float thumbY = processPanel.y + 36 + ((float)processScroll / std::max(1, processMaxScroll)) * (processVisibleHeight - thumbH);
         DrawRectangleRounded({ processPanel.x + processPanel.width - 12, thumbY, 6, thumbH }, 0.4f, 8, Color{ 108, 194, 232, 255 });
     }
 
     auto log = processManager->getActivityLog();
-    vector<const ProcessActivity*> filteredLog;
+    std::vector<const ProcessActivity*> filteredLog;
     for (const auto& entry : log) {
         if (!MatchesFilter(entry.state, filterMode)) {
             continue;
         }
-        if (!ContainsInsensitive(to_string((long long)entry.pid), searchQuery) &&
+        if (!ContainsInsensitive(std::to_string((long long)entry.pid), searchQuery) &&
             !ContainsInsensitive(entry.processName, searchQuery)) {
             continue;
         }
@@ -287,14 +286,14 @@ void LoggerWindow::drawContent() {
     int logRowHeight = 22;
     int logVisibleHeight = (int)activityPanel.height - 46;
     int logContentHeight = (int)filteredLog.size() * logRowHeight;
-    int logMaxScroll = max(0, logContentHeight - logVisibleHeight);
+    int logMaxScroll = std::max(0, logContentHeight - logVisibleHeight);
     if (activityScroll < 0) activityScroll = 0;
     if (activityScroll > logMaxScroll) activityScroll = logMaxScroll;
 
     BeginScissorMode((int)activityPanel.x + 2, (int)activityPanel.y + 32, (int)activityPanel.width - 4, (int)activityPanel.height - 38);
     int logY = (int)activityPanel.y + 36 - activityScroll;
     for (const auto* entry : filteredLog) {
-        string line = entry->timestamp + " | PID " + to_string((long long)entry->pid) +
+        std::string line = entry->timestamp + " | PID " + std::to_string((long long)entry->pid) +
             " | " + entry->processName + " | " + processManager->getStateText(entry->state) +
             " | " + entry->action;
         DrawText(line.c_str(), (int)activityPanel.x + 12, logY, 15, Color{ 204, 244, 219, 255 });
@@ -308,8 +307,8 @@ void LoggerWindow::drawContent() {
 
     if (logMaxScroll > 0) {
         DrawRectangle((int)activityPanel.x + (int)activityPanel.width - 10, (int)activityPanel.y + 36, 2, logVisibleHeight, Fade(RAYWHITE, 0.10f));
-        float thumbH = max(24.0f, ((float)logVisibleHeight / max(1, logContentHeight)) * logVisibleHeight);
-        float thumbY = activityPanel.y + 36 + ((float)activityScroll / max(1, logMaxScroll)) * (logVisibleHeight - thumbH);
+        float thumbH = std::max(24.0f, ((float)logVisibleHeight / std::max(1, logContentHeight)) * logVisibleHeight);
+        float thumbY = activityPanel.y + 36 + ((float)activityScroll / std::max(1, logMaxScroll)) * (logVisibleHeight - thumbH);
         DrawRectangleRounded({ activityPanel.x + activityPanel.width - 12, thumbY, 6, thumbH }, 0.4f, 8, Color{ 108, 194, 232, 255 });
     }
 

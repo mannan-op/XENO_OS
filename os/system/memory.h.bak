@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-using namespace std;
 
 class Memory {
 private:
@@ -8,7 +7,7 @@ private:
     int usedMemory;    // in GB
     int freeMemory;    // in GB
 
-    vector<int> ramBlocks; // simulate memory blocks
+    std::vector<int> ramBlocks; // simulate memory blocks
 
 public:
     Memory(int totalRAM);

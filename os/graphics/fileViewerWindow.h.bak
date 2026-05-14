@@ -1,0 +1,23 @@
+#pragma once
+#include "windows.h"
+#include "../system/process.h"
+#include <vector>
+#include <string>
+
+class FileViewerWindow : public Window {
+private:
+    std::string filePath;
+    std::vector<std::string> lines;
+    int scrollOffset;
+    std::string emptyMessage;
+    process_id_t pid;
+
+    void loadFile();
+
+public:
+    FileViewerWindow(const std::string& title, const std::string& path, const std::string& emptyMessageText, process_id_t processId);
+
+    void update() override;
+    void drawContent() override;
+    process_id_t getPid() const;
+};

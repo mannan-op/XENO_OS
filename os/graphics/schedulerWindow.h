@@ -4,6 +4,8 @@
 #include "../system/processManager.h"
 #include <vector>
 
+using namespace std;
+
 class SchedulerWindow : public Window {
 private:
     ProcessManager* processManager;

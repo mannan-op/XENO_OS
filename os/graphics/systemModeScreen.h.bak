@@ -1,0 +1,19 @@
+#pragma once
+
+#include "raylib.h"
+#include <string>
+#include <vector>
+
+class SystemModeScreen {
+private:
+    std::vector<std::string> messages;
+    float timer;
+    int visibleMessages;
+
+public:
+    SystemModeScreen();
+
+    void update(float dt);
+    void draw();
+    bool isFinished() const;
+};

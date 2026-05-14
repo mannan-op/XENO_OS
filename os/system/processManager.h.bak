@@ -1,0 +1,74 @@
+#pragma once
+#include <vector>
+#include <queue>
+#include <string>
+#include <fstream>
+#include <ctime>
+#include "process.h"
+
+class Memory;
+
+using namespace std;
+
+struct ProcessActivity {
+	process_id_t pid;
+	string processName;
+	ProcessState state;
+	string action;
+	string timestamp;
+	std::time_t startTime;
+	std::time_t endTime;
+};
+
+class ProcessManager {
+public:
+	enum class SchedulingAlgorithm {
+		FCFS,
+		RoundRobin
+	};
+
+private:
+	vector<Process*> processTable;
+	queue<Process*> readyQueue;
+	vector<ProcessActivity> activityLog;
+	std::string bookingFilePath;
+	std::string systemLogFilePath;
+	Memory* memory;
+	int cpuCores;
+
+	int nextPID;
+
+	SchedulingAlgorithm schedulingAlgorithm;
+	int timeQuantum;
+
+	void addActivity(process_id_t pid, const string& name, ProcessState state, const string& action);
+	void closeRunningActivity(process_id_t pid, std::time_t endTime);
+	void rebuildReadyQueue();
+	size_t countRunningProcesses() const;
+	string currentTimestamp(std::time_t now) const;
+	void ensureStorageFiles();
+	void appendSystemLog(const string& message) const;
+
+
+	public:
+	ProcessManager();
+    ~ProcessManager();
+
+	Process* createProcess(string name, int memoryUsage);
+	void terminateProcess(process_id_t pid);
+	void setProcessState(process_id_t pid, ProcessState state, const string& action);
+	void initialize();
+	void setMemory(Memory* mem);
+	void setCpuCores(int cores);
+	void setSchedulingAlgorithm(SchedulingAlgorithm algorithm);
+	void setTimeQuantum(int quantum);
+	SchedulingAlgorithm getSchedulingAlgorithm() const;
+	int getTimeQuantum() const;
+	const string& getBookingFilePath() const;
+	const string& getSystemLogFilePath() const;
+
+	vector<Process*> getProcessTable();
+	vector<Process*> getReadyQueueSnapshot() const;
+    vector<ProcessActivity> getActivityLog() const;
+    const char* getStateText(ProcessState state) const;
+};

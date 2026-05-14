@@ -1,6 +1,5 @@
 #include "terminalWindow.h"
 #include <algorithm>
-using namespace std;
 
 TerminalWindow::TerminalWindow(Memory* mem, int cpu, int storage, process_id_t processId)
     : Window(150, 120, 500, 300, "Terminal")
@@ -11,7 +10,7 @@ TerminalWindow::TerminalWindow(Memory* mem, int cpu, int storage, process_id_t p
     storageGB = storage;
 
     output.push_back("MiniOS Terminal ready.");
-    output.push_back("PID: " + to_string((long long)pid));
+    output.push_back("PID: " + std::to_string((long long)pid));
     output.push_back("Try: help, show ram, show cpu, show storage, top, clear");
 }
 
@@ -38,7 +37,7 @@ void TerminalWindow::update() {
         input.clear();
     }
 }
-void TerminalWindow::executeCommand(const string& cmd) {
+void TerminalWindow::executeCommand(const std::string& cmd) {
 
     if (cmd.empty()) {
         return;
@@ -58,28 +57,28 @@ void TerminalWindow::executeCommand(const string& cmd) {
     }
 
     else if (cmd == "show ram") {
-        output.push_back("Total RAM: " + to_string(memory->getTotal()) + " GB");
-        output.push_back("Used RAM: " + to_string(memory->getUsed()) + " GB");
-        output.push_back("Free RAM: " + to_string(memory->getFree()) + " GB");
+        output.push_back("Total RAM: " + std::to_string(memory->getTotal()) + " GB");
+        output.push_back("Used RAM: " + std::to_string(memory->getUsed()) + " GB");
+        output.push_back("Free RAM: " + std::to_string(memory->getFree()) + " GB");
     }
 
     else if (cmd == "show cpu") {
-        output.push_back("CPU Cores: " + to_string(cpuCores));
+        output.push_back("CPU Cores: " + std::to_string(cpuCores));
     }
 
     else if (cmd == "show storage") {
-        output.push_back("Storage: " + to_string(storageGB) + " GB");
+        output.push_back("Storage: " + std::to_string(storageGB) + " GB");
     }
 
     else if (cmd == "show pid") {
-        output.push_back("PID: " + to_string((long long)pid));
+        output.push_back("PID: " + std::to_string((long long)pid));
     }
 
     else if (cmd == "top") {
         int fakeLoad = rand() % 100;
 
-        output.push_back("CPU Usage: " + to_string(fakeLoad) + "%");
-        output.push_back("Used RAM: " + to_string(memory->getUsed()) + " GB");
+        output.push_back("CPU Usage: " + std::to_string(fakeLoad) + "%");
+        output.push_back("Used RAM: " + std::to_string(memory->getUsed()) + " GB");
     }
 
     else if (cmd == "clear") {
@@ -101,7 +100,7 @@ void TerminalWindow::drawContent() {
 
     const int lineHeight = 18;
     const int maxVisibleLines = (int)((terminalArea.height - 48) / lineHeight);
-    int start = max(0, (int)output.size() - maxVisibleLines);
+    int start = std::max(0, (int)output.size() - maxVisibleLines);
     int y = (int)terminalArea.y + 10;
 
     for (int i = start; i < (int)output.size(); ++i) {
@@ -112,7 +111,7 @@ void TerminalWindow::drawContent() {
     Rectangle promptBar = { terminalArea.x + 8, terminalArea.y + terminalArea.height - 32, terminalArea.width - 16, 22 };
     DrawRectangleRounded(promptBar, 0.3f, 8, Color{ 33, 43, 57, 255 });
 
-    string promptText = "> " + input;
+    std::string promptText = "> " + input;
     if (((int)(GetTime() * 2.0) % 2) == 0) {
         promptText += "_";
     }
